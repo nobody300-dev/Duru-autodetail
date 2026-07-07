@@ -1,0 +1,2514 @@
+<!DOCTYPE html>
+<html lang="sw">
+<<head>
+  <!-- ── MUST BE FIRST ── -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0d1b3e">
+
+  <!-- ── SEO ── -->
+  <title>DURU — Car Wash & Auto Shop Mbeya Tanzania</title>
+  <meta name="description" content="DURU Car Wash & Auto Detailing Mbeya Tanzania. Osho wa gari na bidhaa za magari. Tunakuja kwako mahali ulipo. Agiza sasa — 0619945012.">
+  <meta name="keywords" content="car wash Mbeya, osho wa gari Mbeya, auto shop Mbeya, DURU car wash Tanzania, mobile car wash Mbeya, detailing Mbeya">
+  <meta name="author" content="DURU Car Wash & Auto Shop">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Swahili, English">
+  <link rel="canonical" href="https://duru.pages.dev/">
+
+  <!-- ── OPEN GRAPH — WhatsApp Facebook preview ── -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DURU — Car Wash & Auto Shop Mbeya Tanzania">
+  <meta property="og:description" content="Osho wa gari na bidhaa za magari Mbeya Tanzania. Tunakuja kwako mahali ulipo. Agiza sasa!">
+  <meta property="og:image" content="https://duru.pages.dev/duru-logo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://duru.pages.dev/">
+  <meta property="og:site_name" content="DURU Car Wash">
+  <meta property="og:locale" content="sw_TZ">
+
+  <!-- ── TWITTER/X preview ── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DURU Car Wash & Auto Shop Mbeya">
+  <meta name="twitter:description" content="Osho wa gari na bidhaa za magari — Mbeya Tanzania. Tunakuja kwako!">
+  <meta name="twitter:image" content="https://duru.pages.dev/duru-logo.jpg">
+
+  <!-- ── PWA ── -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/jpeg" href="duru-logo.jpg">
+  <link rel="apple-touch-icon" href="duru-logo.jpg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="DURU">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- ── GOOGLE ANALYTICS ── -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- ── FONTS ── -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700;900&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0d1b3e;--blue:#1a56ff;--blue-lt:#e8edff;--sky:#3b82f6;
+  --white:#ffffff;--smoke:#f4f7ff;--mist:#dde4f5;--ink:#0d1b3e;--ink2:#2a3a6e;
+  --green:#00c27c;--green-lt:#d1fae5;--amber:#f59e0b;--red:#ef4444;--red-lt:#fee2e2;
+  --fd:'Bebas Neue',sans-serif;--fb:'DM Sans',sans-serif;
+  --shadow:0 4px 24px rgba(13,27,62,.12);--shadow-lg:0 12px 48px rgba(13,27,62,.2);
+}
+html,body{font-family:var(--fb);background:var(--smoke);color:var(--ink);overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+
+/* LOADER */
+#loader{position:fixed;inset:0;z-index:9999;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .6s ease,visibility .6s ease}
+#loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+#loader img{width:180px;animation:logoPulse 1.5s ease-in-out infinite}
+@keyframes logoPulse{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(26,86,255,0))}50%{transform:scale(1.07);filter:drop-shadow(0 0 24px rgba(26,86,255,.7))}}
+.loader-bar{width:160px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}
+.loader-fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--sky));border-radius:2px;animation:barFill 2s ease forwards}
+@keyframes barFill{0%{width:0}100%{width:100%}}
+.loader-txt{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4)}
+
+/* APP */
+.app{max-width:480px;margin:0 auto;min-height:100vh;position:relative;background:var(--smoke)}
+
+/* NAV */
+.nav{background:var(--navy);padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 20px rgba(13,27,62,.4)}
+.nav-logo{display:flex;align-items:center;gap:8px}
+.nav-logo img{height:34px;width:auto}
+.nav-right{display:flex;align-items:center;gap:6px}
+.lang-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:6px 10px;border-radius:100px;cursor:pointer}
+.tab-btn{background:transparent;border:none;color:rgba(255,255,255,.45);font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:6px 8px;border-radius:8px;cursor:pointer;transition:all .2s}
+.tab-btn.active{background:var(--blue);color:var(--white)}
+
+/* PAGES */
+.page{display:none}
+.page.active{display:block}
+
+/* HERO */
+.hero{min-height:calc(100vh - 60px);background:var(--navy);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px 80px;text-align:center}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(26,86,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,255,.06) 1px,transparent 1px);background-size:40px 40px;animation:gridMove 20s linear infinite}
+@keyframes gridMove{0%{background-position:0 0}100%{background-position:40px 40px}}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:orbPulse 6s ease-in-out infinite alternate}
+.orb1{width:300px;height:300px;background:var(--blue);top:-100px;right:-60px;opacity:.15}
+.orb2{width:220px;height:220px;background:#3b82f6;bottom:60px;left:-60px;opacity:.12;animation-delay:3s}
+@keyframes orbPulse{0%{transform:scale(1)}100%{transform:scale(1.3)}}
+.hero-logo{width:140px;margin-bottom:20px;position:relative;z-index:2;animation:fadeUp .8s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(26,86,255,.2);border:1px solid rgba(26,86,255,.4);color:#7da4ff;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:18px;position:relative;z-index:2;animation:fadeUp .6s ease .2s both}
+.hero-h1{font-family:var(--fd);font-size:64px;line-height:.9;color:var(--white);letter-spacing:3px;margin-bottom:6px;position:relative;z-index:2;animation:fadeUp .6s ease .25s both}
+.hero-h1 span{color:var(--blue)}
+.hero-sub{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;max-width:280px;margin:0 auto 6px;position:relative;z-index:2;animation:fadeUp .6s ease .3s both}
+.hero-loc{font-size:11px;font-weight:700;color:rgba(255,255,255,.3);letter-spacing:1px;margin-bottom:28px;position:relative;z-index:2;animation:fadeUp .6s ease .33s both}
+.hero-btns{display:flex;flex-direction:column;gap:12px;width:100%;max-width:300px;position:relative;z-index:2;animation:fadeUp .6s ease .36s both}
+.hero-btn-p{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--blue);color:var(--white);padding:17px 24px;border-radius:18px;font-family:var(--fd);font-size:20px;letter-spacing:2px;border:none;cursor:pointer;box-shadow:0 8px 32px rgba(26,86,255,.5);animation:pulse 2.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 8px 32px rgba(26,86,255,.5)}50%{box-shadow:0 8px 48px rgba(26,86,255,.8)}}
+.hero-btn-p:active{transform:scale(.96)}
+.hero-btn-s{display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);padding:13px;border-radius:14px;font-size:11px;font-weight:700;border:1.5px solid rgba(255,255,255,.1);cursor:pointer}
+.hero-btn-s:active{transform:scale(.96)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;max-width:300px;margin-top:24px;position:relative;z-index:2;animation:fadeUp .6s ease .4s both}
+.hero-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px 8px;text-align:center}
+.hero-stat-n{font-family:var(--fd);font-size:24px;color:var(--white)}
+.hero-stat-l{font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:3px}
+
+/* HOW IT WORKS */
+.how{background:var(--smoke);padding:44px 24px}
+.sec-hd{font-family:var(--fd);font-size:34px;letter-spacing:1px;color:var(--navy);margin-bottom:6px}
+.sec-sub{font-size:12px;color:rgba(13,27,62,.45);margin-bottom:24px}
+.steps{display:flex;flex-direction:column;gap:12px}
+.step{display:flex;gap:14px;background:var(--white);border-radius:18px;padding:15px;border:1.5px solid var(--mist)}
+.step-n{width:32px;height:32px;border-radius:10px;background:var(--blue);color:var(--white);font-family:var(--fd);font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-title{font-size:12px;font-weight:800;color:var(--navy);margin-bottom:2px}
+.step-desc{font-size:10px;color:rgba(13,27,62,.45);line-height:1.5}
+
+/* SERVICES SECTION */
+.svc-section{background:var(--navy);padding:44px 24px}
+.svc-cards{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.svc-card{position:relative;overflow:hidden;border-radius:24px;padding:26px;cursor:pointer;border:1.5px solid transparent;transition:transform .18s cubic-bezier(.34,1.56,.64,1);text-align:left;width:100%;background:none}
+.svc-card:active{transform:scale(.97)}
+.svc-wash{background:linear-gradient(135deg,var(--blue),#0d3acc);box-shadow:0 12px 40px rgba(26,86,255,.4)}
+.svc-shop{background:linear-gradient(135deg,#1a2a5e,var(--navy));border-color:rgba(255,255,255,.1)}
+.svc-shimmer{position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.07) 50%,transparent 60%);background-size:200% 100%;animation:shimmer 3s ease-in-out infinite}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.svc-icon{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+.svc-title{font-family:var(--fd);font-size:26px;letter-spacing:1px;color:var(--white);margin-bottom:4px}
+.svc-desc{font-size:11px;font-weight:600;color:rgba(255,255,255,.5)}
+.svc-arrow{position:absolute;right:22px;bottom:26px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:16px}
+
+/* FOOTER */
+.footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+.footer-logo{font-family:var(--fd);font-size:18px;letter-spacing:2px;color:rgba(255,255,255,.3)}
+.footer-pow{font-size:8px;font-weight:700;color:rgba(255,255,255,.2);text-align:right;line-height:1.5}
+.footer-pow span{color:rgba(26,86,255,.6)}
+
+/* PAGE HEADER */
+.page-hdr{background:var(--navy);padding:0 18px;display:flex;align-items:center;justify-content:space-between;height:54px;border-bottom:1px solid rgba(255,255,255,.08)}
+.page-hdr-title{font-family:var(--fd);font-size:20px;letter-spacing:2px;color:var(--white)}
+.page-hdr-title span{color:var(--sky)}
+.back-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);border:none;color:var(--white);font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.hdr-icon{width:36px;height:36px;border-radius:50%;background:rgba(26,86,255,.2);border:none;color:var(--sky);font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+
+/* LOCATION */
+.loc-wrap{padding:14px 18px 6px}
+.loc-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;border-radius:16px;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border:none;transition:all .2s}
+.loc-idle{background:var(--navy);color:var(--white);box-shadow:0 6px 24px rgba(13,27,62,.3);animation:locPulse 2.5s ease-in-out infinite}
+@keyframes locPulse{0%,100%{box-shadow:0 6px 24px rgba(13,27,62,.3)}50%{box-shadow:0 6px 32px rgba(26,86,255,.45)}}
+.loc-done{background:var(--green-lt);color:#065f46;border:2px solid #6ee7b7}
+
+/* SECTION LABEL */
+.sec-lbl{font-size:9px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:rgba(13,27,62,.35);margin-bottom:10px;padding:0 18px}
+
+/* VEHICLE CARD */
+.veh-card{margin:0 18px;background:var(--white);border-radius:22px;padding:20px;border:1.5px solid var(--mist);box-shadow:var(--shadow);animation:cardIn .3s cubic-bezier(.34,1.56,.64,1)}
+@keyframes cardIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.veh-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.veh-badge{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--blue);background:var(--blue-lt);padding:5px 12px;border-radius:100px}
+.del-btn{width:30px;height:30px;border-radius:50%;background:var(--smoke);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(13,27,62,.3);font-size:14px}
+
+/* PLATE INPUT */
+.plate-input{width:100%;padding:13px 14px;background:var(--smoke);border-radius:12px;border:2px solid transparent;font-family:var(--fd);font-size:17px;letter-spacing:3px;color:var(--ink);text-transform:uppercase;outline:none;transition:border-color .2s}
+.plate-input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(26,86,255,.1)}
+.plate-input::placeholder{color:rgba(13,27,62,.25);font-size:13px;letter-spacing:1px;font-family:var(--fb)}
+.plate-input.p-ok{border-color:var(--green)}
+.plate-input.p-err{border-color:var(--red)}
+.plate-hint{font-size:9px;font-weight:700;margin:4px 4px 10px;display:flex;align-items:center;gap:4px}
+.hint-ok{color:var(--green)}.hint-err{color:var(--red)}.hint-idle{color:rgba(13,27,62,.35)}
+
+/* WASH TYPE */
+.wt-row{display:flex;gap:6px;margin-bottom:12px}
+.wt-btn{flex:1;padding:10px 4px;border-radius:11px;border:2px solid var(--mist);background:var(--white);cursor:pointer;font-size:8px;font-weight:800;color:rgba(13,27,62,.35);white-space:pre-line;text-align:center;line-height:1.4;transition:all .15s}
+.wt-btn.on{background:var(--blue-lt);border-color:var(--blue);color:var(--blue)}
+
+/* BODY TYPE */
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.cat-label{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:4px;display:block}
+.cat-select{width:100%;padding:9px 22px 9px 10px;background:var(--smoke);border-radius:8px;border:2px solid transparent;font-size:10px;font-weight:700;color:var(--ink2);outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%231a56ff'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+
+/* NOTES */
+.notes-lbl{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.4);margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.notes-ta{width:100%;padding:11px 13px;background:var(--smoke);border-radius:12px;border:2px solid transparent;font-family:var(--fb);font-size:12px;font-weight:500;color:var(--ink);outline:none;resize:none;min-height:62px;line-height:1.5;transition:border-color .2s}
+.notes-ta:focus{border-color:var(--blue)}
+.notes-ta::placeholder{color:rgba(13,27,62,.3);font-size:11px}
+
+/* EXTRAS */
+.extras-hdr{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.4);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.extras-hdr::after{content:'';flex:1;height:1px;background:var(--mist)}
+.disc-badge{background:var(--green-lt);color:#065f46;font-size:7px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:4px}
+.eg-lbl{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.3);margin-bottom:6px}
+.extras-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.xbtn{padding:11px;border-radius:12px;border:2px solid var(--mist);background:var(--white);cursor:pointer;display:flex;flex-direction:column;gap:5px;text-align:left;transition:all .18s cubic-bezier(.34,1.56,.64,1)}
+.xbtn:active{transform:scale(.95)}
+.xbtn.on{background:var(--blue-lt);border-color:var(--blue)}
+.xbtn-top{display:flex;justify-content:space-between;align-items:center}
+.xi{color:var(--blue);font-size:15px}.xi-off{color:var(--mist);font-size:15px}
+.xn{font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;line-height:1.3;color:var(--ink2)}
+.xn-off{color:rgba(13,27,62,.3)}
+
+/* COUNTER */
+.cnt-box{background:var(--smoke);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.cnt-title{font-size:10px;font-weight:700;color:var(--ink2);margin-bottom:8px}
+.cnt-row{display:flex;align-items:center;gap:10px}
+.cnt-btn{width:32px;height:32px;border-radius:8px;border:1.5px solid var(--mist);background:var(--white);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:var(--ink2)}
+.cnt-btn.plus{border-color:var(--blue);background:var(--blue-lt);color:var(--blue)}
+.cnt-val{font-family:var(--fd);font-size:22px;color:var(--ink);min-width:28px;text-align:center}
+.cnt-lbl{font-size:10px;font-weight:600;color:rgba(13,27,62,.35)}
+.cnt-price{font-size:9px;color:var(--green);font-weight:700;margin-top:5px}
+
+/* ADD VEHICLE */
+.add-veh-btn{margin:12px 18px 0;width:calc(100% - 36px);padding:15px;border-radius:22px;border:2px dashed var(--mist);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.3);transition:all .2s}
+.add-veh-btn:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-lt)}
+
+/* WARN */
+.warn-banner{margin:10px 18px 0;padding:10px 14px;background:#fff7ed;border:1.5px solid #fdba74;border-radius:12px;font-size:10px;font-weight:700;color:#c2410c;display:flex;align-items:center;gap:6px}
+
+/* BOTTOM BAR */
+.btm-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-top:1px solid var(--mist);padding:13px 18px 22px;box-shadow:0 -8px 40px rgba(13,27,62,.1);z-index:100}
+.price-row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:11px}
+.price-lbl{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.4);margin-bottom:3px}
+.price-total{font-family:var(--fd);font-size:28px;color:var(--navy);line-height:1}
+.dep-lbl{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}
+.dep-val{font-family:var(--fd);font-size:20px;color:var(--blue)}
+.proc-btn{width:100%;padding:15px;border-radius:15px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s cubic-bezier(.34,1.56,.64,1)}
+.pb-on{background:var(--blue);color:var(--white);box-shadow:0 6px 24px rgba(26,86,255,.45)}
+.pb-on:active{transform:scale(.97)}
+.pb-off{background:var(--mist);color:rgba(13,27,62,.3);cursor:not-allowed}
+.bal-note{text-align:center;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(13,27,62,.3);margin-top:8px}
+
+/* SHOP */
+.shop-page{padding-bottom:30px}
+.shop-search-wrap{padding:12px 18px 0;position:relative}
+.shop-search{width:100%;padding:12px 14px 12px 42px;background:var(--white);border-radius:14px;border:2px solid var(--mist);font-size:13px;font-weight:500;color:var(--ink);outline:none;transition:border-color .2s}
+.shop-search:focus{border-color:var(--blue)}
+.search-icon{position:absolute;left:30px;top:50%;transform:translateY(-50%);font-size:16px;color:rgba(13,27,62,.3);pointer-events:none}
+.cat-filter{display:flex;gap:8px;padding:10px 18px;overflow-x:auto;scrollbar-width:none}
+.cat-filter::-webkit-scrollbar{display:none}
+.cat-pill{padding:7px 13px;border-radius:100px;border:1.5px solid var(--mist);background:var(--white);font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:all .15s;color:rgba(13,27,62,.4)}
+.cat-pill.on{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.products-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;padding:8px 18px 20px}
+.prod-card{background:var(--white);border-radius:18px;border:1.5px solid var(--mist);overflow:hidden;box-shadow:var(--shadow);transition:transform .15s}
+.prod-card:active{transform:scale(.97)}
+.prod-img{width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--smoke),var(--mist));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative}
+.prod-img-icon{font-size:40px}
+.prod-img-lbl{font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(13,27,62,.25)}
+.tier-badge{position:absolute;top:8px;left:8px;padding:3px 7px;border-radius:100px;font-size:7px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.tier-s{background:#fef3c7;color:#92400e}
+.tier-p{background:#dbeafe;color:#1e40af}
+.tier-pro{background:#f3e8ff;color:#6b21a8}
+.sale-badge{position:absolute;top:8px;right:8px;background:var(--red);color:var(--white);padding:3px 7px;border-radius:100px;font-size:7px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.prod-body{padding:11px}
+.prod-name{font-size:11px;font-weight:800;color:var(--navy);margin-bottom:3px;line-height:1.3}
+.prod-desc{font-size:9px;color:rgba(13,27,62,.45);line-height:1.4;margin-bottom:7px}
+.prod-price-row{display:flex;align-items:center;gap:5px;margin-bottom:9px}
+.prod-price{font-family:var(--fd);font-size:17px;color:var(--blue)}
+.prod-price-orig{font-size:10px;color:rgba(13,27,62,.3);text-decoration:line-through}
+.prod-btns{display:flex;gap:5px}
+.add-cart-btn{flex:1;padding:9px 5px;border-radius:10px;background:var(--blue);color:var(--white);border:none;cursor:pointer;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;transition:all .15s}
+.add-cart-btn:active{transform:scale(.95)}
+.wa-btn-sm{width:34px;height:34px;border-radius:10px;background:#e7fef0;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;text-decoration:none}
+.cart-icon-wrap{position:relative;cursor:pointer}
+.cart-badge{position:absolute;top:-6px;right:-6px;background:var(--red);color:var(--white);border-radius:50%;width:16px;height:16px;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center}
+
+/* MODAL */
+.modal-ov{position:fixed;inset:0;z-index:500;background:rgba(13,27,62,.85);backdrop-filter:blur(8px);display:none;align-items:flex-end;justify-content:center}
+.modal-ov.open{display:flex}
+.modal-sheet{background:var(--white);width:100%;max-width:480px;border-radius:26px 26px 0 0;height:90vh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;animation:sheetUp .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.modal-handle{width:36px;height:4px;background:var(--mist);border-radius:2px;margin:12px auto 0}
+.modal-inner{padding:18px 22px 48px}
+.modal-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
+.modal-logo-row{display:flex;align-items:center;gap:8px}
+.modal-logo-row img{height:28px}
+.modal-logo-txt{font-family:var(--fd);font-size:20px;letter-spacing:2px;color:var(--navy)}
+.modal-logo-txt span{color:var(--blue)}
+.modal-sub-txt{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.35)}
+.close-btn{width:34px;height:34px;border-radius:50%;background:var(--smoke);border:none;cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center;color:var(--ink2)}
+.r-row{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--mist)}
+.r-row:last-child{border-bottom:none}
+.r-key{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(13,27,62,.45)}
+.r-val{font-size:11px;font-weight:800;color:var(--navy);text-align:right;max-width:60%}
+.r-hl{background:var(--blue-lt);border-radius:12px;padding:13px 15px;margin:11px 0;display:flex;justify-content:space-between;align-items:center}
+.r-hl-k{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--blue)}
+.r-hl-v{font-family:var(--fd);font-size:21px;color:var(--blue)}
+.sum-box{background:var(--smoke);border-radius:13px;padding:13px;margin-bottom:13px}
+.sum-title{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.4);margin-bottom:9px}
+.sum-item{display:flex;align-items:flex-start;gap:8px;padding:4px 0;border-bottom:1px solid var(--mist)}
+.sum-item:last-child{border-bottom:none}
+.sum-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:5px}
+.sum-txt{font-size:11px;font-weight:600;color:var(--ink2);line-height:1.4}
+.bd-box{background:var(--smoke);border-radius:12px;padding:11px 13px;margin-bottom:10px}
+.bd-title{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.4);margin-bottom:7px}
+.bd-row{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px dashed var(--mist)}
+.bd-row:last-child{border-bottom:none}
+.bd-key{font-size:10px;font-weight:600;color:var(--ink2)}
+.bd-val{font-size:10px;font-weight:800;color:var(--navy)}
+.ph-wrap{margin-bottom:13px}
+.ph-lbl{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(13,27,62,.5);margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.req-star{color:var(--red);font-size:11px}
+.ph-input{width:100%;padding:13px 14px;background:var(--smoke);border-radius:12px;border:2px solid transparent;font-size:14px;font-weight:700;color:var(--navy);outline:none;transition:border-color .2s;letter-spacing:1px}
+.ph-input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(26,86,255,.1)}
+.ph-input::placeholder{color:rgba(13,27,62,.3);font-size:12px;font-weight:500;letter-spacing:0}
+.ph-input.ph-ok{border-color:var(--green)}
+.ph-input.ph-err{border-color:var(--red)}
+.field-msg{font-size:9px;font-weight:700;margin-top:4px;display:flex;align-items:center;gap:4px}
+.msg-ok{color:var(--green)}.msg-err{color:var(--red)}
+.pay-block{background:var(--navy);border-radius:20px;padding:20px;margin-top:13px;text-align:center;position:relative;overflow:hidden}
+.pay-block::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:var(--blue);opacity:.1;filter:blur(30px)}
+.pay-lbl{font-size:8px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--sky);margin-bottom:6px}
+.pay-how{font-size:10px;font-weight:500;color:rgba(255,255,255,.4);margin-bottom:7px}
+.pay-num{font-family:var(--fd);font-size:26px;letter-spacing:3px;color:var(--white);margin-bottom:2px}
+.pay-name{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:13px}
+.txn-input{width:100%;padding:13px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.1);border-radius:12px;text-align:center;font-size:13px;letter-spacing:1px;color:var(--white);outline:none;transition:border-color .2s;margin-bottom:6px;font-family:var(--fb);font-weight:700}
+.txn-input:focus{border-color:var(--blue)}
+.txn-input::placeholder{font-size:11px;color:rgba(255,255,255,.25)}
+.txn-help{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:rgba(255,255,255,.4);cursor:pointer;background:none;border:none;text-decoration:underline;text-decoration-style:dotted}
+.tc-wrap{margin-top:13px;border-radius:12px;border:1.5px solid var(--mist);overflow:hidden}
+.tc-hdr{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:var(--smoke);cursor:pointer}
+.tc-hdr-txt{font-size:10px;font-weight:700;color:rgba(13,27,62,.5)}
+.tc-link{font-size:10px;font-weight:700;color:var(--blue)}
+.tc-body{padding:13px;font-size:10px;color:rgba(13,27,62,.6);line-height:1.7;border-top:1px solid var(--mist);display:none}
+.tc-body.open{display:block}
+.tc-body h4{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--navy);margin:8px 0 3px}
+.tc-body h4:first-child{margin-top:0}
+.confirm-btn{width:100%;padding:14px;border-radius:12px;background:var(--blue);color:var(--white);border:none;cursor:pointer;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;box-shadow:0 6px 24px rgba(26,86,255,.45);display:flex;align-items:center;justify-content:center;gap:8px;margin-top:13px;transition:all .2s}
+.confirm-btn:active{transform:scale(.97)}
+.confirm-btn:disabled{background:var(--mist);color:rgba(13,27,62,.3);cursor:not-allowed;box-shadow:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* INQUIRY */
+.inq-ov{position:fixed;inset:0;z-index:800;background:rgba(13,27,62,.7);backdrop-filter:blur(6px);display:none;align-items:flex-end;justify-content:center}
+.inq-ov.open{display:flex}
+.inq-sheet{background:var(--white);width:100%;max-width:480px;border-radius:24px 24px 0 0;padding:12px 22px 42px;animation:sheetUp .3s cubic-bezier(.34,1.56,.64,1)}
+.inq-handle{width:36px;height:4px;background:var(--mist);border-radius:2px;margin:0 auto 16px}
+.inq-title{font-family:var(--fd);font-size:24px;letter-spacing:1px;color:var(--navy);margin-bottom:4px}
+.inq-sub{font-size:11px;color:rgba(13,27,62,.4);margin-bottom:16px}
+.inq-channels{display:flex;flex-direction:column;gap:10px}
+.inq-ch{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;text-decoration:none;cursor:pointer;border:none;transition:all .15s}
+.inq-wa{background:#e7fef0;color:#075e54}
+.inq-call{background:var(--blue-lt);color:var(--blue)}
+.inq-ch-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.inq-wa .inq-ch-icon{background:#25d366;color:var(--white)}
+.inq-call .inq-ch-icon{background:var(--blue);color:var(--white)}
+.inq-ch-label{font-size:13px;font-weight:700;display:block;margin-bottom:1px}
+.inq-ch-num{font-size:10px;font-weight:500;opacity:.6}
+.inq-cancel{margin-top:10px;width:100%;padding:13px;border-radius:12px;border:none;background:var(--smoke);color:rgba(13,27,62,.4);font-size:11px;font-weight:700;cursor:pointer}
+
+/* TXN GUIDE */
+.txn-ov{position:fixed;inset:0;z-index:900;background:rgba(13,27,62,.92);display:none;align-items:center;justify-content:center;padding:24px}
+.txn-ov.open{display:flex}
+.txn-card{background:var(--white);border-radius:22px;padding:24px 20px;width:100%;max-width:320px;max-height:85vh;overflow-y:auto}
+.txn-title{font-family:var(--fd);font-size:22px;letter-spacing:1px;color:var(--navy);margin-bottom:4px}
+.txn-sub{font-size:11px;color:rgba(13,27,62,.45);margin-bottom:16px;line-height:1.5}
+.txn-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.txn-step{display:flex;align-items:flex-start;gap:12px}
+.txn-step-n{width:24px;height:24px;border-radius:50%;background:var(--blue);color:var(--white);font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.txn-step-txt{font-size:12px;font-weight:500;color:var(--ink2);line-height:1.5}
+.txn-step-txt strong{font-weight:800;color:var(--navy)}
+.txn-receipt{background:var(--smoke);border-radius:12px;padding:12px;margin-bottom:16px}
+.txn-r-row{display:flex;justify-content:space-between;padding:3px 0}
+.txn-rk{font-size:9px;font-weight:700;color:rgba(13,27,62,.45);text-transform:uppercase}
+.txn-rv{font-size:10px;font-weight:800;color:var(--navy)}
+.txn-rv.txid{font-family:var(--fd);font-size:14px;letter-spacing:2px;color:var(--blue)}
+.txn-close{width:100%;padding:13px;border-radius:12px;background:var(--navy);color:var(--white);border:none;cursor:pointer;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+
+/* SUCCESS */
+.suc-ov{position:fixed;inset:0;z-index:1000;background:rgba(13,27,62,.92);display:none;align-items:center;justify-content:center;padding:24px}
+.suc-ov.open{display:flex}
+.suc-card{background:var(--white);border-radius:22px;padding:42px 26px;text-align:center;max-width:300px;width:100%;animation:cardIn .4s cubic-bezier(.34,1.56,.64,1)}
+.suc-icon{width:68px;height:68px;border-radius:50%;background:var(--green-lt);border:2px solid #6ee7b7;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px}
+.suc-title{font-family:var(--fd);font-size:26px;letter-spacing:1px;color:var(--navy);margin-bottom:8px}
+.suc-body{font-size:12px;color:rgba(13,27,62,.45);line-height:1.7}
+
+/* CART */
+.cart-empty{text-align:center;padding:44px 20px}
+.cart-empty-icon{font-size:48px;margin-bottom:12px}
+.cart-empty-txt{font-size:12px;font-weight:700;color:rgba(13,27,62,.3);text-transform:uppercase;letter-spacing:1px}
+.cart-item{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid var(--mist)}
+.cart-item:last-child{border-bottom:none}
+.cart-item-icon{width:42px;height:42px;background:var(--smoke);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.cart-item-name{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.cart-item-price{font-size:11px;font-weight:600;color:var(--blue)}
+.cart-item-del{background:none;border:none;color:rgba(13,27,62,.3);cursor:pointer;font-size:16px;margin-left:auto}
+.checkout-field{margin-bottom:11px}
+.checkout-lbl{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(13,27,62,.5);margin-bottom:5px;display:block}
+.checkout-input{width:100%;padding:12px 14px;background:var(--smoke);border-radius:12px;border:2px solid transparent;font-size:13px;font-weight:600;color:var(--navy);outline:none;transition:border-color .2s}
+.checkout-input:focus{border-color:var(--blue)}
+
+/* FLOATING BUTTON */
+.float-care{position:fixed;bottom:20px;right:16px;z-index:300;background:var(--blue);color:var(--white);display:flex;align-items:center;gap:8px;padding:13px 17px 13px 13px;border-radius:100px;box-shadow:0 8px 28px rgba(26,86,255,.5);font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border:none;animation:btnFloat 3s ease-in-out infinite}
+@keyframes btnFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.float-care:active{transform:scale(.93)}
+
+::-webkit-scrollbar{width:0}
+</style>
+</head>
+<body>
+
+<!-- ══ LOADER ══ -->
+<div id="loader">
+  <img src="duru-logo.jpg" alt="DURU" id="loader-logo">
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+  <div class="loader-txt" id="loader-txt">Inapakia...</div>
+</div>
+
+<!-- ══ APP ══ -->
+<div class="app" id="app" style="display:none">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">
+    <img src="duru-logo.jpg" alt="DURU" style="height:34px;width:auto">
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn" onclick="toggleLang()" id="lang-btn">EN</button>
+    <button class="tab-btn active" onclick="showPage('landing')" id="tab-landing">Nyumbani</button>
+    <button class="tab-btn" onclick="showPage('wash')" id="tab-wash">Osho</button>
+    <button class="tab-btn" onclick="showPage('shop')" id="tab-shop">Duka</button>
+  </div>
+</nav>
+
+<!-- ══════════ LANDING PAGE ══════════ -->
+<div id="page-landing" class="page active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <img src="duru-logo.jpg" alt="DURU" class="hero-logo">
+    <div class="hero-badge">🚗 <span class="t" data-sw="Huduma Bora za Gari" data-en="Premium Car Services">Huduma Bora za Gari</span></div>
+    <h1 class="hero-h1">DURU<span>.</span></h1>
+    <p class="hero-sub t" data-sw="Osho wa gari na bidhaa za magari — haraka, bora, karibu nawe." data-en="Car wash, detailing & auto accessories — fast, professional, near you.">Osho wa gari na bidhaa za magari — haraka, bora, karibu nawe.</p>
+    <p class="hero-loc">📍 <span class="t" data-sw="Mbeya-Tanzania — Ubora kila mahali" data-en="Mbeya-Tanzania — Convenience & quality everywhere">Mbeya-Tanzania — Ubora kila mahali</span></p>
+    <div class="hero-btns">
+      <button class="hero-btn-p" onclick="showPage('wash')">🚿 <span class="t" data-sw="AGIZA OSHO" data-en="BOOK A WASH">AGIZA OSHO</span></button>
+      <button class="hero-btn-s" onclick="showPage('shop')">🛒 <span class="t" data-sw="Tembelea Duka la Gari" data-en="Visit Auto Shop">Tembelea Duka la Gari</span></button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-n">500+</div>
+        <div class="hero-stat-l t" data-sw="Wateja" data-en="Clients">Wateja</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-n">4.9★</div>
+        <div class="hero-stat-l t" data-sw="Ukadiriaji" data-en="Rating">Ukadiriaji</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-n">24h</div>
+        <div class="hero-stat-l t" data-sw="Majibu" data-en="Response">Majibu</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="how">
+    <div class="sec-hd t" data-sw="Jinsi Inavyofanya Kazi" data-en="How It Works">Jinsi Inavyofanya Kazi</div>
+    <div class="sec-sub t" data-sw="Agiza kwa dakika. Tunakuja kwako." data-en="Order in minutes. We come to you.">Agiza kwa dakika. Tunakuja kwako.</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div>
+          <div class="step-title t" data-sw="Chagua Huduma" data-en="Select Service">Chagua Huduma</div>
+          <div class="step-desc t" data-sw="Chagua osho wa gari au bidhaa za duka." data-en="Choose car wash or shop products.">Chagua osho wa gari au bidhaa za duka.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div>
+          <div class="step-title t" data-sw="Tuma Mahali Ulipo" data-en="Share Your Location">Tuma Mahali Ulipo</div>
+          <div class="step-desc t" data-sw="Bonyeza mara moja — tunakuja moja kwa moja." data-en="Tap once — we come directly to you.">Bonyeza mara moja — tunakuja moja kwa moja.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div>
+          <div class="step-title t" data-sw="Lipa Malipo ya Awali" data-en="Pay Deposit">Lipa Malipo ya Awali</div>
+          <div class="step-desc t" data-sw="45% kupitia M-Pesa Lipa. Salio hulipwa baada ya huduma." data-en="45% via M-Pesa Lipa. Balance paid after service.">45% kupitia M-Pesa Lipa. Salio hulipwa baada ya huduma.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div>
+          <div class="step-title t" data-sw="Tunafika & Tunafanya" data-en="We Arrive & Deliver">Tunafika & Tunafanya</div>
+          <div class="step-desc t" data-sw="Wakala wa DURU anakuja na kufanya kazi bora." data-en="Our DURU agent arrives and delivers quality work.">Wakala wa DURU anakuja na kufanya kazi bora.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="svc-section">
+    <div style="position:relative;z-index:2">
+      <div class="sec-hd" style="color:var(--white)" data-sw="Huduma Zetu" data-en="Our Services">Huduma Zetu</div>
+      <div class="sec-sub" style="color:rgba(255,255,255,.4)" data-sw="Ubora wa hali ya juu katika kila kitu" data-en="Premium quality in everything">Ubora wa hali ya juu katika kila kitu</div>
+    </div>
+    <div class="svc-cards">
+      <button class="svc-card svc-wash" onclick="showPage('wash')">
+        <div class="svc-shimmer"></div>
+        <div class="svc-icon">🚿</div>
+        <div class="svc-title t" data-sw="OSHO WA GARI" data-en="AUTO CARE">OSHO WA GARI</div>
+        <div class="svc-desc t" data-sw="Mobile Wash & Detailing" data-en="Mobile Wash & Detailing">Mobile Wash & Detailing</div>
+        <div class="svc-arrow">→</div>
+      </button>
+      <button class="svc-card svc-shop" onclick="showPage('shop')">
+        <div class="svc-shimmer"></div>
+        <div class="svc-icon">🛒</div>
+        <div class="svc-title t" data-sw="DUKA LA GARI" data-en="AUTO SHOP">DUKA LA GARI</div>
+        <div class="svc-desc t" data-sw="Bidhaa & Vifaa vya Gari" data-en="Car Accessories & Products">Bidhaa & Vifaa vya Gari</div>
+        <div class="svc-arrow">→</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">DURU.</div>
+    <div class="footer-pow">Mbeya, Tanzania<br>Powered by <span>Duru Technologies</span></div>
+  </footer>
+
+</div>
+<!-- END LANDING PAGE -->
+
+<!-- ══════════ WASH PAGE ══════════ -->
+<div id="page-wash" class="page">
+<div style="padding-bottom:180px">
+
+  <div class="page-hdr">
+    <button class="back-btn" onclick="showPage('landing')">←</button>
+    <div class="page-hdr-title">DURU<span>.</span></div>
+    <button class="hdr-icon" onclick="openInquiry()">📞</button>
+  </div>
+
+  <!-- Division Tabs -->
+  <div style="display:flex;gap:8px;padding:12px 18px 0">
+    <button id="div-wash" style="flex:1;padding:10px;border-radius:12px;border:none;cursor:pointer;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;background:var(--blue);color:var(--white);box-shadow:0 4px 16px rgba(26,86,255,.35)" onclick="switchDiv('wash')">
+      🚿 <span class="t" data-sw="Osho wa Gari" data-en="Car Wash">Osho wa Gari</span>
+    </button>
+    <button id="div-shop-link" style="flex:1;padding:10px;border-radius:12px;border:none;cursor:pointer;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;background:var(--white);color:rgba(13,27,62,.4)" onclick="showPage('shop')">
+      🛒 <span class="t" data-sw="Duka la Gari" data-en="Auto Shop">Duka la Gari</span>
+    </button>
+  </div>
+
+  <!-- Location Button -->
+  <div class="loc-wrap">
+    <button class="loc-btn loc-idle" id="loc-btn" onclick="getLocation()">
+      📍 <span id="loc-txt" class="t" data-sw="Tuma Mahali Ulipo" data-en="Share Your Location">Tuma Mahali Ulipo</span>
+    </button>
+  </div>
+  <div style="height:14px"></div>
+
+  <!-- Vehicles -->
+  <div class="sec-lbl t" data-sw="Magari Yako" data-en="Your Vehicles">Magari Yako</div>
+  <div id="vehicles-wrap" style="display:flex;flex-direction:column;gap:12px"></div>
+
+  <button class="add-veh-btn" onclick="addVehicle()">
+    + <span class="t" data-sw="Ongeza Gari Lingine" data-en="Add Another Vehicle">Ongeza Gari Lingine</span>
+  </button>
+
+  <div id="warn-banner" class="warn-banner" style="display:none">
+    ⚠ <span class="t" data-sw="Kila gari inahitaji nambari sahihi, aina ya mwili na aina ya osho." data-en="Each vehicle needs a valid plate, body type and wash type.">Kila gari inahitaji nambari sahihi, aina ya mwili na aina ya osho.</span>
+  </div>
+
+  <div style="height:20px"></div>
+
+  <!-- Bottom Bar -->
+  <div class="btm-bar">
+    <div class="price-row">
+      <div>
+        <div class="price-lbl t" data-sw="Jumla" data-en="Total">Jumla</div>
+        <div class="price-total" id="wash-total">0 TZS</div>
+      </div>
+      <div id="dep-wrap" style="text-align:right;display:none">
+        <div class="dep-lbl t" data-sw="Malipo ya Awali (45%)" data-en="Deposit (45%)">Malipo ya Awali (45%)</div>
+        <div class="dep-val" id="wash-dep">0 TZS</div>
+      </div>
+    </div>
+    <button class="proc-btn pb-off" id="proc-btn" onclick="openWashModal()">
+      <span id="proc-txt" class="t" data-sw="Weka Mahali Kwanza" data-en="Set Location First">Weka Mahali Kwanza</span>
+    </button>
+    <div class="bal-note t" id="bal-note" style="display:none" data-sw="Salio la 55% hulipwa baada ya kazi" data-en="Balance of 55% payable after service">Salio la 55% hulipwa baada ya kazi</div>
+  </div>
+
+</div>
+</div>
+<!-- END WASH PAGE -->
+
+<!-- ══════════ SHOP PAGE ══════════ -->
+<div id="page-shop" class="page">
+<div class="shop-page">
+
+  <div class="page-hdr">
+    <button class="back-btn" onclick="showPage('landing')">←</button>
+    <div class="page-hdr-title">DURU<span>.</span> <span style="font-size:13px;letter-spacing:1px" class="t" data-sw="DUKA" data-en="SHOP">DUKA</span></div>
+    <div class="cart-icon-wrap" onclick="openCart()">
+      <span style="font-size:22px">🛒</span>
+      <span class="cart-badge" id="cart-count">0</span>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="shop-search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="shop-search" id="shop-search" 
+      placeholder="Tafuta bidhaa..."
+      data-sw-ph="Tafuta bidhaa..."
+      data-en-ph="Search products..."
+      oninput="filterProducts()">
+  </div>
+
+  <!-- Category Filter -->
+  <div class="cat-filter">
+    <button class="cat-pill on" onclick="filterCat('all',this)">
+      <span class="t" data-sw="Zote" data-en="All">Zote</span>
+    </button>
+    <button class="cat-pill" onclick="filterCat('engine',this)">
+      <span class="t" data-sw="Injini & Mafuta" data-en="Engine & Fluids">Injini & Mafuta</span>
+    </button>
+    <button class="cat-pill" onclick="filterCat('exterior',this)">
+      <span class="t" data-sw="Nje ya Gari" data-en="Exterior Care">Nje ya Gari</span>
+    </button>
+    <button class="cat-pill" onclick="filterCat('interior',this)">
+      <span class="t" data-sw="Ndani ya Gari" data-en="Interior Care">Ndani ya Gari</span>
+    </button>
+    <button class="cat-pill" onclick="filterCat('electrical',this)">
+      <span class="t" data-sw="Umeme" data-en="Electrical">Umeme</span>
+    </button>
+    <button class="cat-pill" onclick="filterCat('tyres',this)">
+      <span class="t" data-sw="Tairi & Magurudumu" data-en="Tyres & Wheels">Tairi & Magurudumu</span>
+    </button>
+    <button class="cat-pill" onclick="filterCat('safety',this)">
+      <span class="t" data-sw="Usalama & Zana" data-en="Safety & Tools">Usalama & Zana</span>
+    </button>
+  </div>
+
+  <!-- Products Grid (rendered by JS) -->
+  <div class="products-grid" id="products-grid"></div>
+
+</div>
+</div>
+<!-- END SHOP PAGE -->
+
+<!-- ══════════ MODALS ══════════ -->
+
+<!-- INQUIRY MODAL -->
+<div class="inq-ov" id="inq-modal" onclick="if(event.target===this)closeInquiry()">
+  <div class="inq-sheet">
+    <div class="inq-handle"></div>
+    <div class="inq-title t" data-sw="Wasiliana Nasi" data-en="Get In Touch">Wasiliana Nasi</div>
+    <div class="inq-sub t" data-sw="Chagua jinsi ya kuwasiliana na DURU" data-en="Choose how to reach DURU">Chagua jinsi ya kuwasiliana na DURU</div>
+    <div class="inq-channels">
+      <a href="https://wa.me/255619945012" class="inq-ch inq-wa">
+        <div class="inq-ch-icon">💬</div>
+        <div>
+          <span class="inq-ch-label t" data-sw="WhatsApp Chat" data-en="WhatsApp Chat">WhatsApp Chat</span>
+          <span class="inq-ch-num">+255 619 945 012</span>
+        </div>
+      </a>
+      <a href="tel:+255619945012" class="inq-ch inq-call">
+        <div class="inq-ch-icon">📞</div>
+        <div>
+          <span class="inq-ch-label t" data-sw="Piga Simu Moja kwa Moja" data-en="Call Directly">Piga Simu Moja kwa Moja</span>
+          <span class="inq-ch-num">+255 619 945 012</span>
+        </div>
+      </a>
+    </div>
+    <button class="inq-cancel" onclick="closeInquiry()" data-sw="Funga" data-en="Close">Funga</button>
+  </div>
+</div>
+
+<!-- TXN GUIDE MODAL -->
+<div class="txn-ov" id="txn-modal" onclick="if(event.target===this)closeTxn()">
+  <div class="txn-card">
+    <div class="txn-title t" data-sw="Kupata Transaction ID" data-en="Finding Transaction ID">Kupata Transaction ID</div>
+    <div class="txn-sub t" data-sw="Baada ya kutuma pesa kupitia M-Pesa unapata SMS. Transaction ID ipo kwenye ujumbe huo." data-en="After sending money via M-Pesa you receive an SMS. The Transaction ID is in that message.">Baada ya kutuma pesa kupitia M-Pesa unapata SMS. Transaction ID ipo kwenye ujumbe huo.</div>
+    <div class="txn-steps">
+      <div class="txn-step">
+        <div class="txn-step-n">1</div>
+        <div class="txn-step-txt t" data-sw="Fungua <strong>kikasha cha SMS</strong> baada ya kulipa." data-en="Open your <strong>SMS inbox</strong> right after paying.">Fungua <strong>kikasha cha SMS</strong> baada ya kulipa.</div>
+      </div>
+      <div class="txn-step">
+        <div class="txn-step-n">2</div>
+        <div class="txn-step-txt t" data-sw="Tafuta ujumbe kutoka <strong>M-PESA LIPA</strong>." data-en="Find the message from <strong>M-PESA LIPA</strong>.">Tafuta ujumbe kutoka <strong>M-PESA LIPA</strong>.</div>
+      </div>
+      <div class="txn-step">
+        <div class="txn-step-n">3</div>
+        <div class="txn-step-txt t" data-sw="Tafuta nambari kama <strong>SIA1234567</strong> — hiyo ndiyo Transaction ID yako." data-en="Look for a code like <strong>SIA1234567</strong> — that is your Transaction ID.">Tafuta nambari kama <strong>SIA1234567</strong> — hiyo ndiyo Transaction ID yako.</div>
+      </div>
+      <div class="txn-step">
+        <div class="txn-step-n">4</div>
+        <div class="txn-step-txt t" data-sw="Andika au bandika kwenye sehemu ya Transaction ID hapa." data-en="Type or paste it into the Transaction ID field here.">Andika au bandika kwenye sehemu ya Transaction ID hapa.</div>
+      </div>
+    </div>
+    <div class="txn-receipt">
+      <div class="txn-r-row">
+        <span class="txn-rk t" data-sw="Kutoka" data-en="From">Kutoka</span>
+        <span class="txn-rv">M-PESA LIPA</span>
+      </div>
+      <div class="txn-r-row">
+        <span class="txn-rk">Transaction ID</span>
+        <span class="txn-rv txid">SIA1234567</span>
+      </div>
+      <div class="txn-r-row">
+        <span class="txn-rk t" data-sw="Kiasi" data-en="Amount">Kiasi</span>
+        <span class="txn-rv">TShs 45,000</span>
+      </div>
+      <div class="txn-r-row">
+        <span class="txn-rk t" data-sw="Hali" data-en="Status">Hali</span>
+        <span class="txn-rv">✓ <span class="t" data-sw="Imethibitishwa" data-en="Confirmed">Imethibitishwa</span></span>
+      </div>
+    </div>
+    <button class="txn-close" onclick="closeTxn()">
+      <span class="t" data-sw="Sawa — Rudi Nyuma" data-en="Got it — Go Back">Sawa — Rudi Nyuma</span>
+    </button>
+  </div>
+</div>
+
+<!-- WASH ORDER MODAL -->
+<div class="modal-ov" id="wash-modal" onclick="if(event.target===this)closeWashModal()">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-inner">
+
+      <!-- Header -->
+      <div class="modal-hdr">
+        <div>
+          <div class="modal-logo-row">
+            <img src="duru-logo.jpg" alt="DURU" style="height:26px">
+            <div>
+              <div class="modal-logo-txt">DURU<span>.</span></div>
+              <div class="modal-sub-txt t" data-sw="Risiti ya Huduma" data-en="Service Receipt">Risiti ya Huduma</div>
+            </div>
+          </div>
+        </div>
+        <button class="close-btn" onclick="closeWashModal()">✕</button>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="sum-box" id="modal-summary">
+        <div class="sum-title t" data-sw="Muhtasari wa Agizo" data-en="Order Summary">Muhtasari wa Agizo</div>
+      </div>
+
+      <!-- Price Breakdown -->
+      <div class="bd-box" id="modal-breakdown">
+        <div class="bd-title t" data-sw="Mgawanyo wa Bei" data-en="Price Breakdown">Mgawanyo wa Bei</div>
+      </div>
+
+      <!-- Totals -->
+      <div class="r-row">
+        <span class="r-key t" data-sw="Jumla ya Mkataba" data-en="Total Contract">Jumla ya Mkataba</span>
+        <span class="r-val" id="modal-total"></span>
+      </div>
+      <div class="r-hl">
+        <span class="r-hl-k t" data-sw="Malipo ya Awali (45%)" data-en="Deposit (45%)">Malipo ya Awali (45%)</span>
+        <span class="r-hl-v" id="modal-dep"></span>
+      </div>
+      <div class="r-row">
+        <span class="r-key t" data-sw="Salio Baada ya Huduma" data-en="Balance After Service">Salio Baada ya Huduma</span>
+        <span class="r-val" id="modal-bal" style="color:rgba(13,27,62,.4)"></span>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <!-- Phone -->
+      <div class="ph-wrap">
+        <div class="ph-lbl">
+          📱 <span class="t" data-sw="Nambari ya Simu" data-en="Mobile Number">Nambari ya Simu</span>
+          <span class="req-star">*</span>
+        </div>
+        <input class="ph-input" id="modal-phone" type="tel" inputmode="numeric"
+          maxlength="12" placeholder="07xx xxx xxx" oninput="validatePhone()">
+        <div class="field-msg" id="phone-msg" style="display:none"></div>
+      </div>
+
+      <!-- Payment Block -->
+      <!-- Payment choice -->
+<div style="margin-bottom:14px">
+  <div style="font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.5);margin-bottom:10px">
+    <span class="t" data-sw="Chagua Njia ya Kulipa" data-en="Choose Payment Option">Chagua Njia ya Kulipa</span>
+  </div>
+  <div style="display:flex;gap:8px">
+    <div id="pay-opt-deposit" onclick="selectPayOption('deposit')"
+      style="flex:1;padding:12px 10px;border-radius:14px;border:2px solid var(--blue);
+        background:var(--blue-lt);cursor:pointer;text-align:center;transition:all .2s">
+      <div style="font-size:18px;margin-bottom:4px">💳</div>
+      <div style="font-size:10px;font-weight:800;color:var(--blue);margin-bottom:2px">
+        <span class="t" data-sw="Malipo ya Awali" data-en="Pay Deposit">Malipo ya Awali</span>
+      </div>
+      <div style="font-family:var(--fd);font-size:16px;color:var(--blue)" id="deposit-amount-lbl">45%</div>
+      <div style="font-size:8px;color:rgba(13,27,62,.4);margin-top:2px">
+        <span class="t" data-sw="Salio baada ya kazi" data-en="Balance after service">Salio baada ya kazi</span>
+      </div>
+    </div>
+    <div id="pay-opt-full" onclick="selectPayOption('full')"
+      style="flex:1;padding:12px 10px;border-radius:14px;border:2px solid var(--mist);
+        background:var(--white);cursor:pointer;text-align:center;transition:all .2s">
+      <div style="font-size:18px;margin-bottom:4px">🏆</div>
+      <div style="font-size:10px;font-weight:800;color:var(--navy);margin-bottom:2px">
+        <span class="t" data-sw="Lipa Yote" data-en="Pay in Full">Lipa Yote</span>
+      </div>
+      <div style="font-family:var(--fd);font-size:16px;color:var(--green)" id="full-amount-lbl">100%</div>
+      <div style="font-size:8px;color:var(--green);font-weight:700;margin-top:2px">
+        <span class="t" data-sw="Punguzo 5% — Asante!" data-en="5% Discount — Thank you!">Punguzo 5% — Asante!</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pay-block">
+  <div class="pay-lbl t" data-sw="Lipa kupitia M-Pesa Lipa" data-en="Pay via M-Pesa Lipa">Lipa kupitia M-Pesa Lipa</div>
+  <div class="pay-how t" data-sw="Tuma kiasi hiki kwa" data-en="Send this amount to">Tuma kiasi hiki kwa</div>
+  <div style="font-family:var(--fd);font-size:32px;letter-spacing:2px;color:var(--sky);margin-bottom:2px" id="mpesa-amount-display">0 TZS</div>
+  <div class="pay-num">56698139</div>
+  <div class="pay-name">Joe Nut</div>
+  <input class="txn-input" id="txn-id" type="text" inputmode="text"
+    placeholder="Transaction ID — e.g. SIA1234567" oninput="checkSubmit()">
+  <button class="txn-help" onclick="openTxn()">
+    ❓ <span class="t" data-sw="Wapi Transaction ID?" data-en="Where is Transaction ID?">Wapi Transaction ID?</span>
+  </button>
+</div>
+
+      <!-- Terms & Conditions -->
+      <div class="tc-wrap">
+        <div class="tc-hdr" onclick="toggleTc()">
+          <span class="tc-hdr-txt t" data-sw="Kwa kuwasilisha unakubali Masharti yetu" data-en="By submitting you accept our Terms & Conditions">Kwa kuwasilisha unakubali Masharti yetu</span>
+          <span class="tc-link" id="tc-link-txt">
+            <span class="t" data-sw="Soma" data-en="Read">Soma</span>
+          </span>
+        </div>
+        <div class="tc-body" id="tc-body">
+          <h4 class="t" data-sw="1. Makubaliano ya Huduma" data-en="1. Service Agreement">1. Makubaliano ya Huduma</h4>
+          <span class="t" data-sw="Kwa kuweka agizo hili unakubali kushirikiana na DURU. Huduma zote zinafanywa na wakala waliofunzwa wa DURU peke yao." data-en="By placing this order you agree to engage DURU. All services are carried out by trained DURU agents only.">Kwa kuweka agizo hili unakubali kushirikiana na DURU. Huduma zote zinafanywa na wakala waliofunzwa wa DURU peke yao.</span>
+          <h4 class="t" data-sw="2. Amana na Malipo" data-en="2. Deposit & Payment">2. Amana na Malipo</h4>
+          <span class="t" data-sw="Amana isiyorudishwa ya 45% inahitajika kuthibitisha nafasi yako. Salio la 55% hulipwa baada ya kukamilika kwa huduma. Malipo yanakubaliwa kupitia M-Pesa Lipa peke yake." data-en="A non-refundable deposit of 45% is required to confirm your booking. The remaining 55% is payable upon completion. Payments accepted via M-Pesa Lipa only.">Amana isiyorudishwa ya 45% inahitajika kuthibitisha nafasi yako. Salio la 55% hulipwa baada ya kukamilika kwa huduma. Malipo yanakubaliwa kupitia M-Pesa Lipa peke yake.</span>
+          <h4 class="t" data-sw="3. Kufuta Agizo" data-en="3. Cancellation Policy">3. Kufuta Agizo</h4>
+          <span class="t" data-sw="Kufuta chini ya saa 2 kabla ya huduma kutasababisha kupoteza amana. Kuahirisha kunakubaliwa kwa angalau saa 3 za taarifa bila malipo." data-en="Cancellations less than 2 hours before service will forfeit the deposit. Rescheduling accepted with at least 3 hours notice at no charge.">Kufuta chini ya saa 2 kabla ya huduma kutasababisha kupoteza amana. Kuahirisha kunakubaliwa kwa angalau saa 3 za taarifa bila malipo.</span>
+          <h4 class="t" data-sw="4. Majukumu ya Mteja" data-en="4. Client Responsibilities">4. Majukumu ya Mteja</h4>
+          <span class="t" data-sw="Mteja lazima ahakikishe ufikiaji salama wa gari. DURU haitawajibika kwa uharibifu uliokuwepo kabla ambao haukutangazwa." data-en="The client must ensure safe access to the vehicle. DURU is not liable for pre-existing damage not disclosed before service.">Mteja lazima ahakikishe ufikiaji salama wa gari. DURU haitawajibika kwa uharibifu uliokuwepo kabla ambao haukutangazwa.</span>
+          <h4 class="t" data-sw="5. Faragha" data-en="5. Privacy">5. Faragha</h4>
+          <span class="t" data-sw="Taarifa zako za kibinafsi zinatumika kutimiza agizo lako tu na hazitashirikiwa na watu wengine." data-en="Your personal information is used solely to fulfill your order and will not be shared with third parties.">Taarifa zako za kibinafsi zinatumika kutimiza agizo lako tu na hazitashirikiwa na watu wengine.</span>
+          <h4 class="t" data-sw="6. Sheria" data-en="6. Governing Law">6. Sheria</h4>
+          <span class="t" data-sw="Masharti haya yanafuata sheria za Jamhuri ya Muungano wa Tanzania." data-en="These terms are governed by the laws of the United Republic of Tanzania.">Masharti haya yanafuata sheria za Jamhuri ya Muungano wa Tanzania.</span>
+        </div>
+      </div>
+
+      <!-- Error message -->
+      <div id="submit-err" style="display:none;margin:11px 0 0;padding:10px 13px;background:var(--red-lt);border:1.5px solid var(--red);border-radius:12px;font-size:10px;font-weight:700;color:var(--red);display:none;align-items:center;gap:6px">
+        ⚠ <span id="submit-err-txt"></span>
+      </div>
+
+      <!-- Submit Button -->
+      <button class="confirm-btn" id="confirm-btn" disabled onclick="submitWashOrder()">
+        ✓ <span id="confirm-lbl" class="t" data-sw="Wasilisha Agizo" data-en="Submit Order">Wasilisha Agizo</span>
+      </button>
+      <div style="text-align:center;font-size:9px;color:rgba(13,27,62,.3);margin-top:10px;font-weight:600" class="t" data-sw="Kuwasilisha kunakubali Masharti na Hali" data-en="Submitting confirms acceptance of Terms & Conditions">Kuwasilisha kunakubali Masharti na Hali</div>
+
+    </div>
+  </div>
+</div>
+<!-- END WASH MODAL -->
+
+<!-- CART MODAL -->
+<div class="modal-ov" id="cart-modal" onclick="if(event.target===this)closeCart()">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-inner">
+
+      <div class="modal-hdr">
+        <div>
+          <div class="modal-logo-txt t" data-sw="Kikapu Changu" data-en="My Cart">Kikapu Changu</div>
+          <div class="modal-sub-txt" id="cart-count-lbl">0 bidhaa</div>
+        </div>
+        <button class="close-btn" onclick="closeCart()">✕</button>
+      </div>
+
+      <!-- Cart Items (rendered by JS) -->
+      <div id="cart-items"></div>
+
+      <!-- Checkout Form (shown when cart has items) -->
+      <div id="cart-checkout" style="display:none">
+        <div class="r-hl" style="margin:13px 0">
+          <span class="r-hl-k t" data-sw="Jumla ya Amana (45%)" data-en="Total Deposit (45%)">Jumla ya Amana (45%)</span>
+          <span class="r-hl-v" id="cart-dep-val"></span>
+        </div>
+        <div class="checkout-field">
+          <label class="checkout-lbl t" data-sw="Jina Lako Kamili" data-en="Your Full Name">Jina Lako Kamili</label>
+          <input class="checkout-input" id="cart-name" type="text"
+            placeholder="Jina kamili..." data-sw-ph="Jina kamili..." data-en-ph="Full name...">
+        </div>
+        <div class="checkout-field">
+          <label class="checkout-lbl t" data-sw="Nambari ya Simu" data-en="Phone Number">Nambari ya Simu</label>
+          <input class="checkout-input" id="cart-phone" type="tel"
+            inputmode="numeric" maxlength="12" placeholder="07xx xxx xxx">
+        </div>
+        <div class="checkout-field">
+          <label class="checkout-lbl t" data-sw="Anwani ya Uwasilishaji — Mtaa, Mbeya" data-en="Delivery Address — Area, Mbeya">Anwani ya Uwasilishaji — Mtaa, Mbeya</label>
+          <input class="checkout-input" id="cart-address" type="text"
+            placeholder="Mtaa, Mbeya..." data-sw-ph="Mtaa, Mbeya..." data-en-ph="Area, Mbeya...">
+        </div>
+      <!-- Shop payment choice -->
+<div style="margin-bottom:14px">
+  <div style="font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(13,27,62,.5);margin-bottom:10px">
+    <span class="t" data-sw="Chagua Njia ya Kulipa" data-en="Choose Payment Option">Chagua Njia ya Kulipa</span>
+  </div>
+  <div style="display:flex;gap:8px">
+    <div id="shop-pay-deposit" onclick="selectShopPayOption('deposit')"
+      style="flex:1;padding:12px 10px;border-radius:14px;border:2px solid var(--blue);
+        background:var(--blue-lt);cursor:pointer;text-align:center;transition:all .2s">
+      <div style="font-size:18px;margin-bottom:4px">💳</div>
+      <div style="font-size:10px;font-weight:800;color:var(--blue);margin-bottom:2px">
+        <span class="t" data-sw="Malipo ya Awali" data-en="Pay Deposit">Malipo ya Awali</span>
+      </div>
+      <div style="font-family:var(--fd);font-size:16px;color:var(--blue)" id="shop-deposit-lbl">45%</div>
+      <div style="font-size:8px;color:rgba(13,27,62,.4);margin-top:2px">
+        <span class="t" data-sw="Salio baada ya uwasilishaji" data-en="Balance on delivery">Salio baada ya uwasilishaji</span>
+      </div>
+    </div>
+    <div id="shop-pay-full" onclick="selectShopPayOption('full')"
+      style="flex:1;padding:12px 10px;border-radius:14px;border:2px solid var(--mist);
+        background:var(--white);cursor:pointer;text-align:center;transition:all .2s">
+      <div style="font-size:18px;margin-bottom:4px">🏆</div>
+      <div style="font-size:10px;font-weight:800;color:var(--navy);margin-bottom:2px">
+        <span class="t" data-sw="Lipa Yote" data-en="Pay in Full">Lipa Yote</span>
+      </div>
+      <div style="font-family:var(--fd);font-size:16px;color:var(--green)" id="shop-full-lbl">100%</div>
+      <div style="font-size:8px;color:var(--green);font-weight:700;margin-top:2px">
+        <span class="t" data-sw="Punguzo 5% — Asante!" data-en="5% Discount — Thank you!">Punguzo 5% — Asante!</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pay-block" style="margin-top:13px">
+  <div class="pay-lbl t" data-sw="Lipa kupitia M-Pesa Lipa" data-en="Pay via M-Pesa Lipa">Lipa kupitia M-Pesa Lipa</div>
+  <div class="pay-how t" data-sw="Tuma kiasi hiki kwa" data-en="Send this amount to">Tuma kiasi hiki kwa</div>
+  <div style="font-family:var(--fd);font-size:32px;letter-spacing:2px;color:var(--sky);margin-bottom:2px" id="shop-mpesa-display">0 TZS</div>
+  <div class="pay-num">56698139</div>
+  <div class="pay-name">Joe Nut</div>
+  <input class="txn-input" id="cart-txn" type="text"
+    placeholder="Transaction ID — e.g. SIA1234567">
+  <button class="txn-help" onclick="openTxn()">
+    ❓ <span class="t" data-sw="Wapi Transaction ID?" data-en="Where is Transaction ID?">Wapi Transaction ID?</span>
+  </button>
+</div>
+        <button class="confirm-btn" onclick="submitCartOrder()">
+          ✓ <span class="t" data-sw="Wasilisha Agizo la Duka" data-en="Submit Shop Order">Wasilisha Agizo la Duka</span>
+        </button>
+        <div style="text-align:center;margin-top:12px">
+          <a href="https://wa.me/255619945012"
+            style="font-size:11px;color:var(--sky);font-weight:700;text-decoration:none">
+            💬 <span class="t" data-sw="Au uliza kupitia WhatsApp →" data-en="Or inquire via WhatsApp →">Au uliza kupitia WhatsApp →</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- END CART MODAL -->
+
+<!-- SUCCESS SCREEN -->
+<div class="suc-ov" id="suc-modal">
+  <div class="suc-card">
+    <div class="suc-icon">✅</div>
+    <div class="suc-title t" data-sw="AGIZO LIMETHIBITISHWA" data-en="ORDER CONFIRMED">AGIZO LIMETHIBITISHWA</div>
+    <p class="suc-body" id="suc-body" class="t" data-sw="Amana imekumbukwa. Wakala wa DURU atawasiliana nawe hivi karibuni." data-en="Deposit noted. A DURU agent will contact you shortly.">Amana imekumbukwa. Wakala wa DURU atawasiliana nawe hivi karibuni.</p>
+  </div>
+</div>
+
+<!-- FLOATING CUSTOMER CARE BUTTON -->
+<button class="float-care" onclick="openInquiry()">
+  <span style="font-size:17px">💬</span>
+  <span class="t" data-sw="Msaada" data-en="Support">Msaada</span>
+</button>
+
+</div>
+<!-- END .app -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const { createClient } = supabase;
+const sb = createClient(
+  'https://tnsiruerakqjbzrztjxf.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRuc2lydWVyYWtxamJ6cnp0anhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0NjI1MTksImV4cCI6MjA5MTAzODUxOX0.FkGUAgWsqXbLO0qztSiQVdIXxVhhAX2Nw7n90KK_60k'
+);
+// ══════════════════════════════════════
+// STATE
+// ══════════════════════════════════════
+let lang = 'sw';
+let userLocation = null;
+let vehicles = [];
+let vehicleIdCounter = 0;
+let cart = [];
+let washTotal = 0;
+let currentCat = 'all';
+
+// ══════════════════════════════════════
+// PRODUCTS DATA
+// ══════════════════════════════════════
+const products = [
+  // ── Engine & Fluids ──
+  {
+    id:1, cat:'engine', icon:'🛢️',
+    nameSw:'Mafuta ya Injini — Standard',
+    nameEn:'Engine Oil — Standard',
+    descSw:'Ulinzi wa kawaida kwa injini ya gari lako',
+    descEn:'Reliable everyday engine protection',
+    price:15000, tier:'standard'
+  },
+  {
+    id:2, cat:'engine', icon:'🛢️',
+    nameSw:'Mafuta ya Injini — Premium',
+    nameEn:'Engine Oil — Premium',
+    descSw:'Mafuta synthetic kwa utendaji bora na muda mrefu',
+    descEn:'Synthetic oil for peak long-lasting performance',
+    price:28000, tier:'premium'
+  },
+  {
+    id:3, cat:'engine', icon:'🛢️',
+    nameSw:'Mafuta ya Injini — Professional',
+    nameEn:'Engine Oil — Professional',
+    descSw:'Daraja la juu kabisa kama vile maduka ya detailing hutumia',
+    descEn:'Top-grade used by professional detailing shops',
+    price:45000, tier:'professional'
+  },
+  {
+    id:4, cat:'engine', icon:'💧',
+    nameSw:'Maji ya Brake',
+    nameEn:'Brake Fluid',
+    descSw:'DOT 3/4 kwa mfumo wa brake salama',
+    descEn:'DOT 3/4 for a safe braking system',
+    price:8000, tier:'standard'
+  },
+  {
+    id:5, cat:'engine', icon:'❄️',
+    nameSw:'Coolant ya Injini',
+    nameEn:'Engine Coolant',
+    descSw:'Inazuia injini isipate joto kupita kiasi',
+    descEn:'Prevents engine from overheating',
+    price:12000, tier:'standard'
+  },
+  {
+    id:6, cat:'engine', icon:'⚙️',
+    nameSw:'Mafuta ya Gearbox',
+    nameEn:'Transmission Fluid',
+    descSw:'Kwa kubadilisha gia kwa urahisi na laini',
+    descEn:'For smooth and easy gear changes',
+    price:14000, tier:'premium'
+  },
+  {
+    id:7, cat:'engine', icon:'🔩',
+    nameSw:'Mafuta ya Power Steering',
+    nameEn:'Power Steering Fluid',
+    descSw:'Kwa usukani mzuri na wa muda mrefu',
+    descEn:'For responsive and durable steering',
+    price:9000, tier:'standard'
+  },
+
+  // ── Exterior Care ──
+  {
+    id:8, cat:'exterior', icon:'🧴',
+    nameSw:'Sabuni ya Gari',
+    nameEn:'Car Shampoo',
+    descSw:'Inaondoa uchafu bila kudhuru rangi ya gari',
+    descEn:'Removes dirt without damaging paintwork',
+    price:5000, tier:'standard'
+  },
+  {
+    id:9, cat:'exterior', icon:'✨',
+    nameSw:'Wax ya Gari — Premium',
+    nameEn:'Car Wax Polish — Premium',
+    descSw:'Inafanya gari ing\'ae na kulinda rangi dhidi ya jua',
+    descEn:'Shines and protects paint from UV damage',
+    price:18000, tier:'premium'
+  },
+  {
+    id:10, cat:'exterior', icon:'🏆',
+    nameSw:'Ceramic Coating — Professional',
+    nameEn:'Ceramic Coating — Professional',
+    descSw:'Ulinzi wa hali ya juu kwa miaka. Inafanya maji iteleze juu ya gari.',
+    descEn:'Top-grade multi-year protection. Water beads off the surface.',
+    price:85000, tier:'professional',
+    sale:true, origPrice:100000
+  },
+  {
+    id:11, cat:'exterior', icon:'🔧',
+    nameSw:'Dawa ya Kuondoa Mikwaruzo',
+    nameEn:'Scratch Remover Compound',
+    descSw:'Inaondoa michoro midogo na madoa ya rangi',
+    descEn:'Removes light scratches and paint blemishes',
+    price:22000, tier:'premium'
+  },
+  {
+    id:12, cat:'exterior', icon:'🧽',
+    nameSw:'Vitambaa vya Microfibre — Pakiti 5',
+    nameEn:'Microfibre Cloths — Pack of 5',
+    descSw:'Vitambaa laini visivyodhuru rangi ya gari',
+    descEn:'Soft cloths that will not scratch paintwork',
+    price:7000, tier:'standard'
+  },
+  {
+    id:13, cat:'exterior', icon:'🖤',
+    nameSw:'Dawa ya Kuangaza Tairi',
+    nameEn:'Tyre Shine Spray',
+    descSw:'Inafanya magurudumu yaonekane mapya na meusi',
+    descEn:'Makes tyres look brand new and deep black',
+    price:8500, tier:'standard'
+  },
+
+  // ── Interior Care ──
+  {
+    id:14, cat:'interior', icon:'🪑',
+    nameSw:'Vifuniko vya Viti — Standard',
+    nameEn:'Seat Covers — Standard',
+    descSw:'Vifuniko imara vya ngozi ya bandia',
+    descEn:'Durable synthetic leather seat covers',
+    price:35000, tier:'standard'
+  },
+  {
+    id:15, cat:'interior', icon:'🪑',
+    nameSw:'Vifuniko vya Viti — Premium',
+    nameEn:'Seat Covers — Premium',
+    descSw:'Ngozi ya ubora wa juu yenye mfumo wa mapambo',
+    descEn:'High-quality leather with elegant stitching design',
+    price:65000, tier:'premium'
+  },
+  {
+    id:16, cat:'interior', icon:'🛤️',
+    nameSw:'Mikeka ya Sakafu ya Gari',
+    nameEn:'Car Floor Mats',
+    descSw:'Mikeka imara na rahisi kusafisha, seti ya 4',
+    descEn:'Durable easy-clean mats, set of 4',
+    price:18000, tier:'standard'
+  },
+  {
+    id:17, cat:'interior', icon:'🌸',
+    nameSw:'Manukato ya Gari',
+    nameEn:'Car Air Freshener',
+    descSw:'Manukato ya muda mrefu ndani ya gari',
+    descEn:'Long-lasting premium cabin fragrance',
+    price:4500, tier:'standard'
+  },
+  {
+    id:18, cat:'interior', icon:'🧹',
+    nameSw:'Dawa ya Kuangaza Dashboard',
+    nameEn:'Dashboard Polish & Protector',
+    descSw:'Inafanya dashboard ing\'ae, inalinda dhidi ya UV',
+    descEn:'Shines dashboard and protects from UV cracking',
+    price:6500, tier:'standard'
+  },
+  {
+    id:19, cat:'interior', icon:'🧼',
+    nameSw:'Dawa ya Kusafisha Viti vya Ngozi',
+    nameEn:'Leather Seat Cleaner & Conditioner',
+    descSw:'Inasafisha na kulainisha viti vya ngozi',
+    descEn:'Cleans and conditions leather seats',
+    price:16000, tier:'premium'
+  },
+
+  // ── Electrical ──
+  {
+    id:20, cat:'electrical', icon:'📱',
+    nameSw:'Kishikizo cha Simu — Magnetic',
+    nameEn:'Phone Holder — Magnetic',
+    descSw:'Magnetic mount inayoshikilia simu vizuri ukiwa barabarani',
+    descEn:'Strong magnetic mount for safe hands-free driving',
+    price:8000, tier:'standard'
+  },
+  {
+    id:21, cat:'electrical', icon:'⚡',
+    nameSw:'Chaja ya Gari — Fast Charge',
+    nameEn:'Car Charger — Fast Charge',
+    descSw:'Fast charge USB-C na USB-A bandari mbili',
+    descEn:'Dual port fast charge USB-C and USB-A',
+    price:12000, tier:'standard'
+  },
+  {
+    id:22, cat:'electrical', icon:'📹',
+    nameSw:'Kamera ya Dash — HD',
+    nameEn:'Dash Camera — HD',
+    descSw:'Inarekodia safari yako kwa uwazi wa HD kwa usalama',
+    descEn:'Records your journey in HD for road safety',
+    price:55000, tier:'premium'
+  },
+  {
+    id:23, cat:'electrical', icon:'📹',
+    nameSw:'Kamera ya Dash — Professional 4K',
+    nameEn:'Dash Camera — Professional 4K',
+    descSw:'4K resolution, GPS, na night vision ya hali ya juu',
+    descEn:'4K resolution with GPS and superior night vision',
+    price:95000, tier:'professional'
+  },
+  {
+    id:24, cat:'electrical', icon:'💡',
+    nameSw:'Taa za LED za Gari',
+    nameEn:'LED Headlight Bulbs',
+    descSw:'Taa mkali mara 3 ya kawaida na za kudumu',
+    descEn:'3x brighter than standard bulbs, long lasting',
+    price:16000, tier:'premium'
+  },
+
+  // ── Tyres & Wheels ──
+  {
+    id:25, cat:'tyres', icon:'💨',
+    nameSw:'Pampu ya Hewa ya Umeme',
+    nameEn:'Electric Tyre Inflator',
+    descSw:'Inapiga hewa matairi haraka bila nguvu ya mikono',
+    descEn:'Quickly inflates tyres without manual effort',
+    price:28000, tier:'standard'
+  },
+  {
+    id:26, cat:'tyres', icon:'🔧',
+    nameSw:'Dawa ya Kusafisha Rim',
+    nameEn:'Rim & Wheel Cleaner',
+    descSw:'Inaondoa kutu na uchafu wa brake dust kwenye magurudumu',
+    descEn:'Removes rust and brake dust buildup from wheels',
+    price:9500, tier:'standard'
+  },
+  {
+    id:27, cat:'tyres', icon:'🛞',
+    nameSw:'Kifuniko cha Tairi la Spare',
+    nameEn:'Spare Tyre Cover',
+    descSw:'Inalinda tairi la spare kutoka jua na mvua',
+    descEn:'Protects spare tyre from sun and rain damage',
+    price:14000, tier:'standard'
+  },
+  {
+    id:28, cat:'tyres', icon:'🔩',
+    nameSw:'Kiti cha Kubadilisha Tairi',
+    nameEn:'Tyre Repair Kit',
+    descSw:'Kit kamili ya kurekebisha tairi haraka barabarani',
+    descEn:'Complete kit for quick roadside tyre repairs',
+    price:18000, tier:'standard'
+  },
+
+  // ── Safety & Tools ──
+  {
+    id:29, cat:'safety', icon:'🔋',
+    nameSw:'Starter ya Dharura — Jump Starter',
+    nameEn:'Emergency Jump Starter',
+    descSw:'Anza gari lako bila ya gari lingine, portable na ndogo',
+    descEn:'Start your car without another vehicle, compact and portable',
+    price:65000, tier:'premium'
+  },
+  {
+    id:30, cat:'safety', icon:'🪢',
+    nameSw:'Kamba ya Kuvuta Magari',
+    nameEn:'Heavy Duty Tow Rope',
+    descSw:'Kamba imara yenye nguvu ya kuvuta magari makubwa',
+    descEn:'Heavy duty rope strong enough to tow large vehicles',
+    price:12000, tier:'standard'
+  },
+  {
+    id:31, cat:'safety', icon:'🧯',
+    nameSw:'Kizima Moto cha Gari',
+    nameEn:'Vehicle Fire Extinguisher',
+    descSw:'Kizima moto maalum kwa magari kwa usalama barabarani',
+    descEn:'Vehicle-specific fire extinguisher for road safety',
+    price:22000, tier:'standard'
+  },
+  {
+    id:32, cat:'safety', icon:'⚠️',
+    nameSw:'Pembetatu ya Tahadhari — Seti 2',
+    nameEn:'Warning Triangle — Set of 2',
+    descSw:'Ishara ya hatari barabarani, inahitajika kisheria Tanzania',
+    descEn:'Road safety triangles, legally required in Tanzania',
+    price:8000, tier:'standard'
+  },
+  {
+    id:33, cat:'safety', icon:'🔦',
+    nameSw:'Tochi ya Dharura ya Gari',
+    nameEn:'Vehicle Emergency Torch',
+    descSw:'Tochi kali yenye mwanga mkali kwa dharura usiku',
+    descEn:'Powerful bright torch for night-time emergencies',
+    price:15000, tier:'standard'
+  },
+  {
+    id:34, cat:'safety', icon:'🧰',
+    nameSw:'Sanduku la Zana za Gari',
+    nameEn:'Vehicle Tool Kit',
+    descSw:'Zana za msingi kwa matengenezo madogo ya gari',
+    descEn:'Essential tools for minor vehicle maintenance',
+    price:35000, tier:'standard',
+    sale:true, origPrice:45000
+  }
+];
+
+// ══════════════════════════════════════
+// PRICING CONSTANTS
+// ══════════════════════════════════════
+const VEH_CLASSES = [
+  {
+    id       : 'passenger',
+    icon     : '🚗',
+    nameSw   : 'ABIRIA',
+    nameEn   : 'PASSENGER',
+    descSw   : 'Magari madogo ya kawaida ya familia',
+    descEn   : 'Small everyday family cars',
+    examples : 'Toyota Vitz, Ist, Demio, Nissan March, Honda Fit, Mazda 2',
+    flatRate : false,
+    prices   : { exterior:10000, interior:20000, both:28000 }
+  },
+  {
+    id       : 'saloon',
+    icon     : '🚙',
+    nameSw   : 'SALUNI / EXECUTIVE',
+    nameEn   : 'SALOON / EXECUTIVE',
+    descSw   : 'Magari ya kati na ya kifahari ya ofisi',
+    descEn   : 'Mid-range and executive office cars',
+    examples : 'Toyota Premio, Allion, Mark X, Camry, BMW 3 Series, Mercedes C-Class',
+    flatRate : false,
+    prices   : { exterior:15000, interior:25000, both:35000 }
+  },
+  {
+    id       : 'lifestyle',
+    icon     : '🛻',
+    nameSw   : 'LIFESTYLE / SUV / PICKUP',
+    nameEn   : 'LIFESTYLE / SUV / PICKUP',
+    descSw   : 'Magari makubwa ya familia na safari',
+    descEn   : 'Large family and off-road vehicles',
+    examples : 'Toyota Rav4, Prado, Hilux, Fortuner, Nissan X-Trail, Pajero, Land Cruiser',
+    flatRate : false,
+    prices   : { exterior:15000, interior:30000, both:42000 }
+  },
+  {
+    id       : 'van',
+    icon     : '🚐',
+    nameSw   : 'VAN / BAS',
+    nameEn   : 'VAN / BUS',
+    descSw   : 'Mabasi na mivans ya abiria',
+    descEn   : 'Passenger vans and minibuses',
+    examples : 'Toyota Noah, Hiace, Daladala, Minibus, Panel Van, Coaster',
+    flatRate : false,
+    prices   : { exterior:20000, interior:40000, both:55000 }
+  },
+  {
+    id       : 'supercar',
+    icon     : '🏎️',
+    nameSw   : 'GARI LA HARAKA / CONVERTIBLE',
+    nameEn   : 'SUPERCAR / SPORTS / CONVERTIBLE',
+    descSw   : 'Magari ya haraka na ya kifahari ya hali ya juu',
+    descEn   : 'High-end sports and luxury vehicles',
+    examples : 'Lamborghini, Ferrari, Porsche, Mercedes AMG, BMW M Series, Mustang',
+    flatRate : false,
+    prices   : { exterior:50000, interior:80000, both:120000 }
+  },
+  {
+    id       : 'commercial',
+    icon     : '🚛',
+    nameSw   : 'BIASHARA / LORI',
+    nameEn   : 'COMMERCIAL / TRUCK',
+    descSw   : 'Magari ya biashara na usafirishaji',
+    descEn   : 'Commercial and heavy transport vehicles',
+    examples : 'Lorry, Light Truck, Tipper, Prime Mover, Trailer, Concrete Mixer',
+    flatRate : false,
+    prices   : { exterior:35000, interior:65000, both:90000 }
+  },
+  {
+    id       : 'chinese',
+    icon     : '🚘',
+    nameSw   : 'GARI DOGO LA CHINA',
+    nameEn   : 'CHINESE MINI / MICRO CAR',
+    descSw   : 'Magari madogo ya bei nafuu ya China',
+    descEn   : 'Small affordable Chinese micro cars',
+    examples : 'Lifan, Chery QQ, Geely Panda, BYD Mini, Haval H1',
+    flatRate : false,
+    prices   : { exterior:8000, interior:15000, both:20000 }
+  },
+  {
+    id       : 'bajaji',
+    icon     : '🛺',
+    nameSw   : 'BAJAJI / GUTA / TRIKE',
+    nameEn   : 'BAJAJI / GUTA / TRIKE',
+    descSw   : 'Vyombo vya usafiri vya magurudumu matatu — bei moja tu',
+    descEn   : 'Three-wheel transport vehicles — flat rate',
+    examples : 'Bajaji, Guta, TVS King, Piaggio Ape',
+    flatRate : true,
+    prices   : { flat:15000 }
+  },
+  {
+    id       : 'moto',
+    icon     : '🏍️',
+    nameSw   : 'PIKIPIKI / BAISKELI',
+    nameEn   : 'MOTORCYCLE / BICYCLE',
+    descSw   : 'Pikipiki na baiskeli zote za magurudumu mawili — bei moja tu',
+    descEn   : 'All two-wheel vehicles — flat rate',
+    examples : 'Bodaboda, Yamaha, Honda, Suzuki, Baiskeli yoyote',
+    flatRate : true,
+    prices   : { flat:8000 }
+  },
+];
+
+// Extra service prices (TZS)
+const X_PRICES = {
+  headlights : 28500,
+  engine     : 23750,
+  ceramic    : 237500,
+  scratch    : 38000,
+  ac_car     : 25000,
+  odour      : 35000,
+  tyre_rim   : 15000
+};
+
+// Extra service names — Swahili
+const X_NAMES_SW = {
+  headlights : 'Kurejesha Taa',
+  engine     : 'Kusafisha Injini Bay',
+  ceramic    : 'Ceramic Coating',
+  scratch    : 'Kuondoa Mikwaruzo',
+  ac_car     : 'Kusafisha AC Vent',
+  odour      : 'Kuondoa Harufu',
+  tyre_rim   : 'Kusafisha Tairi & Rim'
+};
+
+// Extra service names — English
+const X_NAMES_EN = {
+  headlights : 'Headlight Restore',
+  engine     : 'Engine Bay Detail',
+  ceramic    : 'Ceramic Coating',
+  scratch    : 'Scratch Removal',
+  ac_car     : 'AC Vent Clean',
+  odour      : 'Odour Elimination',
+  tyre_rim   : 'Tyre & Rim Dress'
+};
+
+// ══════════════════════════════════════
+// PRICING HELPERS
+// ══════════════════════════════════════
+
+// Car wash base price — depends on wash type + body category
+function vehBase(v) {
+  if (!v.vehicleClass || v.plateSt !== 'ok') return 0;
+  const cls = VEH_CLASSES.find(c => c.id === v.vehicleClass);
+  if (!cls) return 0;
+  if (cls.flatRate) return cls.prices.flat;
+  if (!v.washType) return 0;
+  return cls.prices[v.washType] || 0;
+}
+
+// Seat shampoo pricing — per seat
+function sofaPrice(n) {
+  const s = parseInt(n) || 0;
+  if (s === 0) return 0;
+  if (s === 1) return 8000;
+  if (s === 2) return 15000;
+  if (s === 3) return 20000;
+  return 20000 + (s - 3) * 6000; // 4+ seats
+}
+
+// Format number with commas
+function fmt(n) {
+  return Math.round(n).toLocaleString();
+}
+
+// Tanzania plate formatter
+function fmtPlate(raw) {
+  const v = raw.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  let o = '';
+  if (v.length > 0) o += v[0];
+  if (v.length > 1) o += ' ' + v.slice(1, 4);
+  if (v.length > 4) o += ' ' + v.slice(4, 7);
+  return o.trim();
+}
+
+// Plate validation
+function plateSt(p) {
+  const v = p.trim();
+  if (!v) return 'idle';
+  return /^T \d{3} [A-Z]{3}$/i.test(v) ? 'ok' : 'err';
+}
+
+// Phone validation — Tanzania 07xx or 06xx 10 digits
+function phoneSt(v) {
+  if (!v) return 'idle';
+  return /^(0[67]\d{8})$/.test(v.replace(/\s/g,'')) ? 'ok' : 'err';
+}
+
+// ══════════════════════════════════════
+// LANGUAGE TOGGLE
+// ══════════════════════════════════════
+function toggleLang() {
+  lang = lang === 'sw' ? 'en' : 'sw';
+  document.getElementById('lang-btn').textContent = lang === 'sw' ? 'EN' : 'SW';
+
+  // Update all elements with class 't' that have data-sw and data-en
+  document.querySelectorAll('.t').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val) el.innerHTML = val;
+  });
+
+  // Update search placeholder
+  const search = document.getElementById('shop-search');
+  if (search) {
+    search.placeholder = search.getAttribute('data-' + lang + '-ph') || search.placeholder;
+  }
+
+  // Re-render vehicles and products to reflect new language
+  if (vehicles.length > 0) renderVehicles();
+  renderProducts(currentCat);
+}
+
+// ══════════════════════════════════════
+// PAGE NAVIGATION
+// ══════════════════════════════════════
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+  document.getElementById('page-' + page).classList.add('active');
+  const tab = document.getElementById('tab-' + page);
+  if (tab) tab.classList.add('active');
+
+  if (page === 'shop') renderProducts(currentCat);
+  window.scrollTo(0, 0);
+}
+
+// ══════════════════════════════════════
+// LOADER
+// ══════════════════════════════════════
+window.addEventListener('load', async () => {
+  // Load products from Supabase first
+  await loadProductsFromDB();
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hide');
+    document.getElementById('app').style.display = 'block';
+    initVehicles();
+    renderProducts('all');
+  }, 2400);
+});
+
+async function loadProductsFromDB() {
+  try {
+    const { data, error } = await sb
+      .from('products')
+      .select('*')
+      .eq('visible', true)
+      .order('sort_order', { ascending: true });
+
+    if (error || !data || data.length === 0) {
+      // Supabase failed or empty — keep hardcoded products as fallback
+      console.log('Using local products fallback');
+      return;
+    }
+
+    // Map Supabase columns to the format duru.html expects
+    products.length = 0; // clear hardcoded list
+    data.forEach(p => {
+      products.push({
+        id        : p.id,
+        cat       : p.category,
+        icon      : p.icon || '📦',
+        nameSw    : p.name_sw,
+        nameEn    : p.name_en,
+        descSw    : p.desc_sw || '',
+        descEn    : p.desc_en || '',
+        price     : p.price,
+        origPrice : p.orig_price || null,
+        tier      : p.tier,
+        sale      : p.is_sale || false,
+        inStock   : p.in_stock,
+        imageUrl  : p.image_url || null,
+      });
+    });
+    console.log('Loaded', products.length, 'products from Supabase');
+  } } catch(e) {
+    const grid = document.getElementById('products-grid');
+    if (grid) {
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:32px;'
+        +'font-size:12px;color:rgba(13,27,62,.4);font-weight:700;line-height:2">'
+        +'⚠️ Bidhaa zinapakia...<br>Hakikisha una mtandao wa intaneti.<br><br>'
+        +'Products loading... Check your internet connection.</div>';
+    }
+  }
+
+// ══════════════════════════════════════
+// VEHICLE MANAGEMENT
+// ══════════════════════════════════════
+function initVehicles() {
+  if (vehicles.length === 0) addVehicle();
+}
+
+function addVehicle() {
+  vehicleIdCounter++;
+  vehicles.push({
+  id           : vehicleIdCounter,
+  plate        : '',
+  plateSt      : 'idle',
+  vehicleClass : '',
+  washType     : '',
+  notes        : '',
+  extras       : [],
+  seatShampoo  : 0
+});
+  renderVehicles();
+  recalcWash();
+}
+
+function removeVehicle(id) {
+  vehicles = vehicles.filter(v => v.id !== id);
+  renderVehicles();
+  recalcWash();
+}
+
+function renderVehicles() {
+  const wrap = document.getElementById('vehicles-wrap');
+  wrap.innerHTML = '';
+  vehicles.forEach((v, idx) => {
+    const div = document.createElement('div');
+    div.innerHTML = buildVehCard(v, idx);
+    wrap.appendChild(div.firstElementChild);
+  });
+}
+
+function buildVehCard(v, idx) {
+  const isMulti = vehicles.length > 1;
+
+  const plateHint =
+    v.plateSt === 'ok'  ? '<div class="plate-hint hint-ok" id="plate-hint-'+v.id+'">✓ '+(lang==='sw'?'Nambari sahihi':'Valid plate')+'</div>' :
+    v.plateSt === 'err' ? '<div class="plate-hint hint-err" id="plate-hint-'+v.id+'">⚠ '+(lang==='sw'?'Muundo: T 777 ABC':'Format: T 777 ABC')+'</div>' :
+                          '<div class="plate-hint hint-idle" id="plate-hint-'+v.id+'">ℹ '+(lang==='sw'?'Mfano: T 777 ABC':'Example: T 777 ABC')+'</div>';
+
+  const extExtras = [
+    { id:'headlights', sw:'Kurejesha\nTaa',    en:'Headlight\nRestore', icon:'💡' },
+    { id:'scratch',    sw:'Kuondoa\nMikwaruzo', en:'Scratch\nRemoval',   icon:'🔧' },
+    { id:'ceramic',    sw:'Ceramic\nCoating',   en:'Ceramic\nCoating',   icon:'✨' },
+    { id:'tyre_rim',   sw:'Tairi\n& Rim',       en:'Tyre &\nRim Dress',  icon:'🛞' }
+  ];
+
+  const intExtras = [
+    { id:'engine', sw:'Injini\nBay',      en:'Engine Bay\nDetail',  icon:'⚙️' },
+    { id:'ac_car', sw:'Kusafisha\nAC',    en:'AC Vent\nClean',      icon:'❄️' },
+    { id:'odour',  sw:'Kuondoa\nHarufu', en:'Odour\nElimination',  icon:'🌸' }
+  ];
+
+  const buildXBtns = function(list) {
+    return list.map(function(ex) {
+      const on = v.extras.includes(ex.id);
+      return '<button class="xbtn '+(on?'on':'')+'" onclick="toggleExtra('+v.id+',\''+ex.id+'\')">'
+        +'<div class="xbtn-top">'
+        +'<span class="'+(on?'xi':'xi-off')+'">'+ex.icon+'</span>'
+        +(on?'<span style="color:var(--blue);font-size:11px">✓</span>':'')
+        +'</div>'
+        +'<span class="xn '+(on?'':'xn-off')+'" style="white-space:pre-line">'
+        +(lang==='sw'?ex.sw:ex.en)
+        +'</span></button>';
+    }).join('');
+  };
+
+  const shampooCount = v.seatShampoo || 0;
+  const shampooPriceNote = shampooCount > 0
+    ? '<div class="cnt-price">✓ '+shampooCount+' '+(lang==='sw'?'kiti(viti)':'seat(s)')+' — '+fmt(sofaPrice(shampooCount))+' TZS</div>'
+    : '';
+
+  // Build class cards
+  let classCardsHTML = '';
+  VEH_CLASSES.forEach(function(cls) {
+    const selected = v.vehicleClass === cls.id;
+    const borderColor = selected ? 'var(--blue)' : 'var(--mist)';
+    const bgColor = selected ? 'var(--blue-lt)' : 'var(--white)';
+    const titleColor = selected ? 'var(--blue)' : 'var(--navy)';
+
+    let priceRowHTML = '';
+    let washBtnHTML = '';
+    let flatHTML = '';
+
+    if (selected && !cls.flatRate) {
+      // Price display row
+      const wts = ['exterior','interior','both'];
+      let priceCells = '';
+      wts.forEach(function(wt) {
+        const isWt = v.washType === wt;
+        const bg = isWt ? 'var(--blue)' : 'rgba(13,27,62,.06)';
+        const col = isWt ? 'var(--white)' : 'rgba(13,27,62,.4)';
+        const pCol = isWt ? 'var(--white)' : 'var(--blue)';
+        const wtLabel = wt==='exterior'
+          ? (lang==='sw'?'NJE TU':'EXT ONLY')
+          : wt==='interior'
+          ? (lang==='sw'?'NDANI TU':'INT ONLY')
+          : (lang==='sw'?'NDANI+NJE':'BOTH');
+        priceCells += '<div style="flex:1;background:'+bg+';border-radius:8px;padding:6px 4px;text-align:center">'
+          +'<div style="font-size:8px;font-weight:800;color:'+col+';letter-spacing:.5px;text-transform:uppercase;margin-bottom:2px">'+wtLabel+'</div>'
+          +'<div style="font-family:var(--fd);font-size:14px;color:'+pCol+'">'+fmt(cls.prices[wt])+' TZS</div>'
+          +'</div>';
+      });
+      priceRowHTML = '<div style="display:flex;gap:6px;margin-top:10px">'+priceCells+'</div>';
+
+      // Wash type select buttons
+      let btnCells = '';
+      wts.forEach(function(wt) {
+        const isWt = v.washType === wt;
+        const btnBorder = isWt ? 'var(--blue)' : 'var(--mist)';
+        const btnBg = isWt ? 'var(--blue)' : 'var(--white)';
+        const btnCol = isWt ? 'var(--white)' : 'rgba(13,27,62,.4)';
+        const btnLabel = wt==='exterior'
+          ? (lang==='sw'?'Chagua Nje':'Select Ext')
+          : wt==='interior'
+          ? (lang==='sw'?'Chagua Ndani':'Select Int')
+          : (lang==='sw'?'Chagua Zote':'Select Both');
+        btnCells += '<button onclick="event.stopPropagation();setWashType('+v.id+',\''+wt+'\')"'
+          +' style="flex:1;padding:8px 4px;border-radius:8px;'
+          +'border:2px solid '+btnBorder+';background:'+btnBg+';'
+          +'cursor:pointer;font-size:9px;font-weight:800;color:'+btnCol+';'
+          +'text-transform:uppercase;letter-spacing:.5px">'+btnLabel+'</button>';
+      });
+      washBtnHTML = '<div style="display:flex;gap:6px;margin-top:8px">'+btnCells+'</div>';
+    }
+
+    if (selected && cls.flatRate) {
+      flatHTML = '<div style="margin-top:10px;background:var(--blue);border-radius:10px;padding:10px;text-align:center">'
+        +'<div style="font-size:9px;font-weight:800;color:rgba(255,255,255,.7);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px">'
+        +(lang==='sw'?'Bei ya Jumla (Ndani + Nje)':'Flat Rate (Full Clean)')+'</div>'
+        +'<div style="font-family:var(--fd);font-size:22px;color:var(--white)">'+fmt(cls.prices.flat)+' TZS</div>'
+        +'</div>';
+    }
+
+    classCardsHTML += '<div onclick="setVehicleClass('+v.id+',\''+cls.id+'\')"'
+      +' style="width:100%;text-align:left;padding:12px 14px;border-radius:14px;'
+      +'border:2px solid '+borderColor+';background:'+bgColor+';'
+      +'cursor:pointer;margin-bottom:8px;transition:all .15s">'
+      +'<div style="display:flex;align-items:center;gap:10px">'
+      +'<span style="font-size:28px">'+cls.icon+'</span>'
+      +'<div style="flex:1">'
+      +'<div style="font-size:11px;font-weight:800;color:'+titleColor+';margin-bottom:2px">'
+      +(lang==='sw'?cls.nameSw:cls.nameEn)+'</div>'
+      +'<div style="font-size:9px;font-weight:600;color:rgba(13,27,62,.45);margin-bottom:3px">'
+      +(lang==='sw'?cls.descSw:cls.descEn)+'</div>'
+      +'<div style="font-size:9px;font-weight:500;color:rgba(13,27,62,.35);font-style:italic">'
+      +cls.examples+'</div>'
+      +'</div>'
+      +(selected?'<span style="color:var(--blue);font-size:18px">✓</span>':'')
+      +'</div>'
+      +priceRowHTML
+      +washBtnHTML
+      +flatHTML
+      +'</div>';
+  });
+
+  return '<div class="veh-card" id="veh-'+v.id+'">'
+
+    // Header
+    +'<div class="veh-hdr">'
+    +'<span class="veh-badge">'+(lang==='sw'?'Gari':'Vehicle')+' #'+(idx+1)+'</span>'
+    +(isMulti?'<button class="del-btn" onclick="removeVehicle('+v.id+')">🗑</button>':'')
+    +'</div>'
+
+    // Plate
+    +'<input class="plate-input '+(v.plateSt==='ok'?'p-ok':v.plateSt==='err'?'p-err':'')+'"'
+    +' id="plate-input-'+v.id+'"'
+    +' placeholder="T 777 ABC" value="'+v.plate+'" maxlength="12"'
+    +' oninput="updatePlate('+v.id+',this.value)">'
+    +plateHint
+
+    // Vehicle class selector
+    +'<div style="margin-bottom:4px">'
+    +'<div class="eg-lbl" style="margin-bottom:10px">'
+    +(lang==='sw'?'CHAGUA AINA YA GARI LAKO':'SELECT YOUR VEHICLE CLASS')
+    +'</div>'
+    +classCardsHTML
+    +'</div>'
+    +(!v.vehicleClass && v.plateSt==='ok'
+      ?'<div class="plate-hint hint-idle" style="margin-bottom:8px">⚠ '
+      +(lang==='sw'?'Chagua aina ya gari ili kuona bei':'Select vehicle class to see pricing')
+      +'</div>':'')
+
+    // Notes
+    +'<div style="margin-bottom:12px">'
+    +'<div class="notes-lbl">📝 '+(lang==='sw'?'Maelezo ya Ziada':'Special Instructions')
+    +' <span style="font-weight:500;opacity:.5;text-transform:none;letter-spacing:0">'
+    +'('+(lang==='sw'?'si lazima':'optional')+')</span></div>'
+    +'<textarea class="notes-ta"'
+    +' placeholder="'+(lang==='sw'?'Mfano: Harufu ya sigara ndani ya gari...':'E.g. Smoke smell inside, extra care on rims...')+'"'
+    +' oninput="setVehNotes('+v.id+',this.value)">'+v.notes+'</textarea>'
+    +'</div>'
+
+    // Extras header
+    +'<div class="extras-hdr">'
+    +(lang==='sw'?'Huduma za Ziada':'Additional Services')
+    +' <span class="disc-badge">-5% OFF</span>'
+    +'</div>'
+
+    // Exterior extras
+    +'<div class="eg-lbl" style="margin-bottom:6px">'
+    +(lang==='sw'?'NJE YA GARI':'EXTERIOR')+'</div>'
+    +'<div class="extras-grid" style="margin-bottom:10px">'+buildXBtns(extExtras)+'</div>'
+
+    // Interior extras
+    +'<div class="eg-lbl" style="margin-bottom:6px">'
+    +(lang==='sw'?'NDANI YA GARI':'INTERIOR')+'</div>'
+    +'<div class="extras-grid" style="margin-bottom:10px">'+buildXBtns(intExtras)+'</div>'
+
+    // Seat shampoo
+    +'<div class="eg-lbl" style="margin-bottom:6px">'
+    +(lang==='sw'?'MAPAMBO / UPHOLSTERY':'UPHOLSTERY')+'</div>'
+    +'<div class="cnt-box">'
+    +'<div class="cnt-title">'+(lang==='sw'?'Kusafisha Viti — kwa kila kiti':'Seat Shampooing — per seat')+'</div>'
+    +'<div class="cnt-row">'
+    +'<button class="cnt-btn" onclick="adjShampoo('+v.id+',-1)">−</button>'
+    +'<span class="cnt-val" id="shampoo-'+v.id+'">'+shampooCount+'</span>'
+    +'<button class="cnt-btn plus" onclick="adjShampoo('+v.id+',1)">+</button>'
+    +'<span class="cnt-lbl">'+(lang==='sw'?'viti':'seats')+'</span>'
+    +'</div>'
+    +shampooPriceNote
+    +'</div>'
+
+    +'</div>';
+}
+
+// ── Vehicle field updaters ──
+function updatePlate(id, raw) {
+  const p = fmtPlate(raw);
+  const v = vehicles.find(x => x.id === id);
+  if (!v) return;
+  v.plate   = p;
+  v.plateSt = plateSt(p);
+
+  // Update only the input styling — do NOT rebuild the card
+  const input = document.getElementById('plate-input-' + id);
+  if (input) {
+    input.value = p;
+    input.className = 'plate-input ' +
+      (v.plateSt==='ok' ? 'p-ok' : v.plateSt==='err' ? 'p-err' : '');
+  }
+
+  // Update only the hint text
+  const hint = document.getElementById('plate-hint-' + id);
+  if (hint) {
+    hint.className = 'plate-hint ' +
+      (v.plateSt==='ok' ? 'hint-ok' : v.plateSt==='err' ? 'hint-err' : 'hint-idle');
+    hint.innerHTML = v.plateSt==='ok'
+      ? '✓ ' + (lang==='sw' ? 'Nambari sahihi' : 'Valid plate')
+      : v.plateSt==='err'
+      ? '⚠ ' + (lang==='sw' ? 'Muundo: T 777 ABC' : 'Format: T 777 ABC')
+      : 'ℹ ' + (lang==='sw' ? 'Mfano: T 777 ABC' : 'Example: T 777 ABC');
+  }
+
+  recalcWash();
+}
+
+function setVehicleClass(id, classId) {
+  const v = vehicles.find(x => x.id === id);
+  if (!v) return;
+  v.vehicleClass = classId;
+  const cls = VEH_CLASSES.find(c => c.id === classId);
+  // If flat rate, auto-set washType to 'both' since it is one price
+  if (cls && cls.flatRate) {
+    v.washType = 'both';
+  } else {
+    v.washType = '';
+  }
+  renderVehicles();
+  recalcWash();
+}
+
+function setWashType(id, wt) {
+  const v = vehicles.find(x => x.id === id);
+  if (!v) return;
+  v.washType = wt;
+  renderVehicles();
+  recalcWash();
+}
+
+function setVehBody(id, body) {
+  const v = vehicles.find(x => x.id === id);
+  if (!v) return;
+  v.body = body;
+  recalcWash();
+}
+
+function setVehNotes(id, notes) {
+  const v = vehicles.find(x => x.id === id);
+  if (!v) return;
+  v.notes = notes;
+}
+
+function toggleExtra(id, eid) {
+  const v = vehicles.find(x => x.id === id);
+  if (!v) return;
+  v.extras = v.extras.includes(eid)
+    ? v.extras.filter(e => e !== eid)
+    : [...v.extras, eid];
+  renderVehicles();
+  recalcWash();
+}
+
+function adjShampoo(id, delta) {
+  const v = vehicles.find(x => x.id === id);
+  if (!v) return;
+  v.seatShampoo = Math.max(0, (v.seatShampoo || 0) + delta);
+  renderVehicles();
+  recalcWash();
+}
+
+// ── Recalculate wash total ──
+function recalcWash() {
+  washTotal = vehicles.reduce((sum, v) => {
+    const base    = vehBase(v);
+    const disc    = base > 0 ? 0.95 : 1;
+    const extras  = v.extras.reduce((s, e) => s + (X_PRICES[e] || 0) * disc, 0);
+    const shampoo = v.seatShampoo > 0 ? sofaPrice(v.seatShampoo) * disc : 0;
+    return sum + base + extras + shampoo;
+  }, 0);
+
+  // Update total display
+  document.getElementById('wash-total').textContent =
+    washTotal > 0 ? fmt(washTotal) + ' TZS' : '0 TZS';
+
+  // Deposit display
+  const depWrap = document.getElementById('dep-wrap');
+  const depVal  = document.getElementById('wash-dep');
+  if (washTotal > 0) {
+    depWrap.style.display = 'block';
+    depVal.textContent    = fmt(washTotal * 0.45) + ' TZS';
+  } else {
+    depWrap.style.display = 'none';
+  }
+
+  // Balance note
+  document.getElementById('bal-note').style.display = washTotal > 0 ? 'block' : 'none';
+
+  // Warning banner
+  const hasInvalid = vehicles.some(v => {
+    if (v.plateSt !== 'ok' || !v.vehicleClass) return true;
+    const cls = VEH_CLASSES.find(c => c.id === v.vehicleClass);
+    if (!cls) return true;
+    if (cls.flatRate) return false;
+    return !v.washType;
+  });
+  document.getElementById('warn-banner').style.display = hasInvalid ? 'block' : 'none';
+
+  updateProcBtn();
+}
+
+function updateProcBtn() {
+  const btn    = document.getElementById('proc-btn');
+  const txt    = document.getElementById('proc-txt');
+ const allOk = vehicles.every(v => {
+  if (v.plateSt !== 'ok' || !v.vehicleClass) return false;
+  const cls = VEH_CLASSES.find(c => c.id === v.vehicleClass);
+  if (!cls) return false;
+  if (cls.flatRate) return true;
+  return !!v.washType;
+});
+  const ready  = userLocation && allOk;
+
+  btn.className = 'proc-btn ' + (ready ? 'pb-on' : 'pb-off');
+  btn.disabled  = !ready;
+
+  if (!userLocation) {
+    txt.textContent = lang === 'sw' ? 'Weka Mahali Kwanza' : 'Set Location First';
+  } else if (!allOk) {
+    txt.textContent = lang === 'sw' ? 'Kamilisha Maelezo ya Gari' : 'Complete Vehicle Details';
+  } else {
+    txt.textContent = washTotal > 0
+      ? (lang === 'sw' ? 'Thibitisha & Pata Risiti' : 'Confirm & Get Receipt')
+      : (lang === 'sw' ? 'Agiza Tathmini ya Bure'   : 'Book Free Survey');
+  }
+}
+
+// ══════════════════════════════════════
+// LOCATION
+// ══════════════════════════════════════
+function getLocation() {
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        setLocDone();
+      },
+      () => {
+        // Fallback to Mbeya city center coordinates
+        userLocation = { lat: -8.9, lng: 33.46 };
+        setLocDone();
+      }
+    );
+  }
+}
+
+function setLocDone() {
+  const btn = document.getElementById('loc-btn');
+  btn.className   = 'loc-btn loc-done';
+  btn.innerHTML   = '✅ ' + (lang === 'sw' ? 'Mahali Pamepatikana' : 'Location Secured');
+  updateProcBtn();
+}
+
+// ══════════════════════════════════════
+// MODAL CONTROLS
+// ══════════════════════════════════════
+function openInquiry()  { document.getElementById('inq-modal').classList.add('open'); }
+function closeInquiry() { document.getElementById('inq-modal').classList.remove('open'); }
+function openTxn()      { document.getElementById('txn-modal').classList.add('open'); }
+function closeTxn()     { document.getElementById('txn-modal').classList.remove('open'); }
+
+function toggleTc() {
+  const body = document.getElementById('tc-body');
+  const link = document.getElementById('tc-link-txt');
+  body.classList.toggle('open');
+  link.innerHTML = body.classList.contains('open')
+    ? `<span class="t" data-sw="Ficha" data-en="Hide">${lang==='sw'?'Ficha':'Hide'}</span>`
+    : `<span class="t" data-sw="Soma"  data-en="Read">${lang==='sw'?'Soma':'Read'}</span>`;
+}
+
+// ══════════════════════════════════════
+// WASH MODAL
+// ══════════════════════════════════════
+function openWashModal() {
+  const allOk = vehicles.every(v => {
+  if (v.plateSt !== 'ok' || !v.vehicleClass) return false;
+  const cls = VEH_CLASSES.find(c => c.id === v.vehicleClass);
+  if (!cls) return false;
+  if (cls.flatRate) return true;
+  return !!v.washType;
+});
+  if (!userLocation || !allOk) return;
+  buildWashModal();
+  document.getElementById('wash-modal').classList.add('open');
+}
+
+function closeWashModal() {
+  document.getElementById('wash-modal').classList.remove('open');
+}
+
+function buildWashModal() {
+  const xNm = lang === 'sw' ? X_NAMES_SW : X_NAMES_EN;
+
+  // Summary
+ let sumHTML = '';
+  vehicles.forEach((v, i) => {
+    const cls = VEH_CLASSES.find(c => c.id === v.vehicleClass);
+    const clsName = cls ? (lang==='sw' ? cls.nameSw : cls.nameEn) : (v.vehicleClass||'');
+    const wl = cls?.flatRate
+      ? (lang==='sw'?'Osho Kamili':'Full Clean')
+      : v.washType==='interior'
+      ? (lang==='sw'?'Ndani Tu':'Interior Only')
+      : v.washType==='exterior'
+      ? (lang==='sw'?'Nje Tu':'Exterior Only')
+      : (lang==='sw'?'Ndani + Nje':'Interior + Exterior');
+
+    sumHTML += `<div class="sum-item"><div class="sum-dot"></div>
+      <span class="sum-txt">${lang==='sw'?'Gari':'Vehicle'} #${i+1}: ${clsName} — ${v.plate} — ${wl}</span></div>`;
+
+    if (v.extras.length) {
+      sumHTML += `<div class="sum-item"><div class="sum-dot"></div>
+        <span class="sum-txt">${lang==='sw'?'Ziada':'Extras'}: ${v.extras.map(e=>xNm[e]||e).join(', ')}</span></div>`;
+    }
+    if (v.seatShampoo > 0) {
+      sumHTML += `<div class="sum-item"><div class="sum-dot"></div>
+        <span class="sum-txt">${lang==='sw'?'Kusafisha Viti':'Seat Shampoo'}: ${v.seatShampoo} ${lang==='sw'?'kiti(viti)':'seat(s)'}</span></div>`;
+    }
+    if (v.notes.trim()) {
+      sumHTML += `<div class="sum-item"><div class="sum-dot"></div>
+        <span class="sum-txt">${lang==='sw'?'Maelezo':'Note'}: ${v.notes.trim()}</span></div>`;
+    }
+  });
+  document.getElementById('modal-summary').innerHTML =
+    `<div class="sum-title">${lang==='sw'?'Muhtasari wa Agizo':'Order Summary'}</div>` + sumHTML;
+
+  // Breakdown
+  let bdHTML = '';
+  vehicles.forEach((v, i) => {
+    const base = vehBase(v);
+    const disc = base > 0 ? 0.95 : 1;
+    const bdCls = VEH_CLASSES.find(c => c.id === v.vehicleClass);
+    const bdClsName = bdCls ? (lang==='sw' ? bdCls.nameSw : bdCls.nameEn) : (v.vehicleClass||'');
+    const wl = bdCls?.flatRate
+      ? (lang==='sw'?'Kamili':'Full')
+      : v.washType==='interior'
+      ? (lang==='sw'?'Ndani':'Int')
+      : v.washType==='exterior'
+      ? (lang==='sw'?'Nje':'Ext')
+      : (lang==='sw'?'Ndani+Nje':'Both');
+
+    bdHTML += `<div class="bd-row">
+      <span class="bd-key">${lang==='sw'?'Gari':'Veh'} #${i+1} — ${bdClsName} (${wl})</span>
+      <span class="bd-val">${fmt(base)} TZS</span></div>`;
+
+    v.extras.forEach(e => {
+      bdHTML += `<div class="bd-row">
+        <span class="bd-key">+ ${xNm[e]||e}${base>0?' (-5%)':''}</span>
+        <span class="bd-val">${fmt((X_PRICES[e]||0)*disc)} TZS</span></div>`;
+    });
+
+    if (v.seatShampoo > 0) {
+      bdHTML += `<div class="bd-row">
+        <span class="bd-key">+ ${lang==='sw'?'Viti':'Seats'} ×${v.seatShampoo}${base>0?' (-5%)':''}</span>
+        <span class="bd-val">${fmt(sofaPrice(v.seatShampoo)*disc)} TZS</span></div>`;
+    }
+  });
+  document.getElementById('modal-breakdown').innerHTML =
+    `<div class="bd-title">${lang==='sw'?'Mgawanyo wa Bei':'Price Breakdown'}</div>` + bdHTML;
+
+  document.getElementById('modal-total').textContent = fmt(washTotal) + ' TZS';
+  document.getElementById('modal-dep').textContent   = fmt(washTotal * 0.45) + ' TZS';
+  document.getElementById('modal-bal').textContent   = fmt(washTotal * 0.55) + ' TZS';
+  washPayOption = 'deposit';
+  selectPayOption('deposit');
+  setTimeout(updateMpesaDisplay, 50);
+}
+
+// ══════════════════════════════════════
+// PAYMENT OPTION — WASH
+// ══════════════════════════════════════
+let washPayOption = 'deposit'; // default
+
+function selectPayOption(option) {
+  washPayOption = option;
+
+  const depEl  = document.getElementById('pay-opt-deposit');
+  const fullEl = document.getElementById('pay-opt-full');
+
+  // Reset both
+  depEl.style.border  = '2px solid var(--mist)';
+  depEl.style.background = 'var(--white)';
+  fullEl.style.border = '2px solid var(--mist)';
+  fullEl.style.background = 'var(--white)';
+
+  // Highlight selected
+  if (option === 'deposit') {
+    depEl.style.border  = '2px solid var(--blue)';
+    depEl.style.background = 'var(--blue-lt)';
+  } else {
+    fullEl.style.border = '2px solid var(--green)';
+    fullEl.style.background = 'var(--green-lt)';
+  }
+
+  updateMpesaDisplay();
+}
+
+function updateMpesaDisplay() {
+  const el = document.getElementById('mpesa-amount-display');
+  if (!el) return;
+  if (washPayOption === 'full') {
+    const discounted = Math.round(washTotal * 0.95);
+    el.textContent = fmt(discounted) + ' TZS';
+    el.style.color = 'var(--green)';
+  } else {
+    el.textContent = fmt(washTotal * 0.45) + ' TZS';
+    el.style.color = 'var(--sky)';
+  }
+}
+
+// ══════════════════════════════════════
+// PAYMENT OPTION — SHOP
+// ══════════════════════════════════════
+let shopPayOption = 'deposit'; // default
+
+function selectShopPayOption(option) {
+  shopPayOption = option;
+
+  const depEl  = document.getElementById('shop-pay-deposit');
+  const fullEl = document.getElementById('shop-pay-full');
+
+  depEl.style.border  = '2px solid var(--mist)';
+  depEl.style.background = 'var(--white)';
+  fullEl.style.border = '2px solid var(--mist)';
+  fullEl.style.background = 'var(--white)';
+
+  if (option === 'deposit') {
+    depEl.style.border  = '2px solid var(--blue)';
+    depEl.style.background = 'var(--blue-lt)';
+  } else {
+    fullEl.style.border = '2px solid var(--green)';
+    fullEl.style.background = 'var(--green-lt)';
+  }
+
+  updateShopMpesaDisplay();
+}
+
+function updateShopMpesaDisplay() {
+  const el = document.getElementById('shop-mpesa-display');
+  if (!el) return;
+  const cartTotal = cart.reduce((s, c) => s + c.price * c.qty, 0);
+  if (shopPayOption === 'full') {
+    el.textContent = fmt(Math.round(cartTotal * 0.95)) + ' TZS';
+    el.style.color = 'var(--green)';
+  } else {
+    el.textContent = fmt(Math.round(cartTotal * 0.45)) + ' TZS';
+    el.style.color = 'var(--sky)';
+  }
+}
+
+function validatePhone() {
+  const v   = document.getElementById('modal-phone').value.replace(/\D/g,'');
+  const ok  = /^(0[67]\d{8})$/.test(v);
+  const msg = document.getElementById('phone-msg');
+  msg.style.display = v ? 'flex' : 'none';
+  msg.className     = 'field-msg ' + (ok ? 'msg-ok' : 'msg-err');
+  msg.textContent   = ok
+    ? '✓ ' + (lang==='sw' ? 'Nambari imekubaliwa' : 'Number accepted')
+    : '⚠ ' + (lang==='sw' ? 'Nambari sahihi: 07xx au 06xx, tarakimu 10' : 'Valid TZ number: 07xx or 06xx, 10 digits');
+  checkSubmit();
+}
+
+function checkSubmit() {
+  const phone = document.getElementById('modal-phone').value.replace(/\D/g,'');
+  const txn   = document.getElementById('txn-id').value.trim();
+  const ok    = /^(0[67]\d{8})$/.test(phone) && txn.length >= 4;
+  const btn   = document.getElementById('confirm-btn');
+  const lbl   = document.getElementById('confirm-lbl');
+  btn.disabled = !ok;
+  if (!/^(0[67]\d{8})$/.test(phone)) {
+    lbl.textContent = lang==='sw' ? 'Ingiza Nambari ya Simu' : 'Enter Mobile Number';
+  } else if (txn.length < 4) {
+    lbl.textContent = lang==='sw' ? 'Ingiza Transaction ID' : 'Enter Transaction ID';
+  } else {
+    lbl.textContent = lang==='sw' ? 'Wasilisha Agizo' : 'Submit Order';
+  }
+}
+
+async function submitWashOrder() {
+  if (window._submitting) return;
+  window._submitting = true;
+  // ... rest of function
+  const phone = document.getElementById('modal-phone').value;
+  const txn   = document.getElementById('txn-id').value;
+  const payload = {
+    type     : 'wash',
+ vehicles: vehicles.map(v => ({
+      plate        : v.plate,
+      vehicleClass : v.vehicleClass,
+      washType     : v.washType,
+      extras       : v.extras,
+      seatShampoo  : v.seatShampoo,
+      notes        : v.notes
+    })),
+    total    : washTotal,
+    deposit  : Math.round(washTotal * 0.45),
+    phone, txn,
+    location : userLocation,
+    created  : new Date().toISOString()
+  };
+  const { error } = await sb.from('orders').insert([{
+    order_type     : 'wash',
+    customer_phone : phone,
+    vehicles       : payload.vehicles,
+    total_amount   : payload.total,
+    deposit_paid   : washPayOption === 'full'
+      ? Math.round(washTotal * 0.95)
+      : Math.round(washTotal * 0.45),
+    payment_type   : washPayOption,
+    txn_ref        : txn,
+    location_gps   : userLocation ? `${userLocation.lat},${userLocation.lng}` : null,
+    status         : 'pending',
+  }]);
+  if (error) { alert('Imeshindwa kutuma. Jaribu tena.'); return; }
+  closeWashModal();
+  showSuccess(lang==='sw'
+    ? `Amana imekumbukwa. Wakala wa DURU atawasiliana nawe hivi karibuni kwenye ${phone}.`
+    : `Deposit noted. A DURU agent will contact you shortly on ${phone}.`
+  );
+  // Reset
+  vehicles = [];
+  vehicleIdCounter = 0;
+  initVehicles();
+  recalcWash();
+  window._submitting = false;
+}
+
+
+// ══════════════════════════════════════
+// SHOP
+// ══════════════════════════════════════
+function renderProducts(cat) {
+  currentCat = cat;
+  const search   = (document.getElementById('shop-search') || {}).value || '';
+  const grid     = document.getElementById('products-grid');
+  const filtered = products.filter(p => {
+    const matchCat    = cat === 'all' || p.cat === cat;
+    const matchSearch = !search
+      || p.nameSw.toLowerCase().includes(search.toLowerCase())
+      || p.nameEn.toLowerCase().includes(search.toLowerCase());
+    return matchCat && matchSearch;
+  });
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px 20px;color:rgba(13,27,62,.3);font-size:12px;font-weight:700">
+      ${lang==='sw'?'Hakuna bidhaa zilizopatikana':'No products found'}</div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => buildProdCard(p)).join('');
+}
+
+function buildProdCard(p) {
+  const name    = lang==='sw' ? p.nameSw : p.nameEn;
+  const desc    = lang==='sw' ? p.descSw : p.descEn;
+  const tierCls = { standard:'tier-s', premium:'tier-p', professional:'tier-pro' };
+  const inCart  = cart.find(c => c.id === p.id);
+  const outOfStock = p.inStock === false;
+  const waMsg   = encodeURIComponent(
+    'Habari DURU, ninapenda kununua:\n' + name + '\nBei: ' + fmt(p.price) + ' TZS\nNambari yangu: '
+  );
+
+  // Image section — real image if available, emoji placeholder if not
+  const imgSection = p.imageUrl
+    ? '<img src="'+p.imageUrl+'" alt="'+name+'"'
+      +' style="width:100%;aspect-ratio:1;object-fit:cover;display:block"'
+      +' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
+      +'<div style="display:none;width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--smoke),var(--mist));flex-direction:column;align-items:center;justify-content:center;gap:6px">'
+      +'<div class="prod-img-icon">'+p.icon+'</div>'
+      +'<div class="prod-img-lbl">'+(lang==='sw'?'Picha inakuja':'Image coming')+'</div>'
+      +'</div>'
+    : '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--smoke),var(--mist))">'
+      +'<div class="prod-img-icon">'+p.icon+'</div>'
+      +'<div class="prod-img-lbl">'+(lang==='sw'?'Picha inakuja':'Image coming')+'</div>'
+      +'</div>';
+
+  return '<div class="prod-card" style="'+(outOfStock?'opacity:.6':'')+'">'
+
+    // Image wrapper with badges
+    +'<div class="prod-img" style="padding:0;overflow:hidden;position:relative">'
+    +imgSection
+    +'<div style="position:absolute;top:8px;left:8px">'
+    +'<div class="tier-badge '+tierCls[p.tier]+'">'+p.tier+'</div>'
+    +'</div>'
+    +(p.sale && !outOfStock
+      ?'<div style="position:absolute;top:8px;right:8px" class="sale-badge">'
+      +(lang==='sw'?'PUNGUZO':'SALE')+'</div>':'')
+    +(outOfStock
+      ?'<div style="position:absolute;inset:0;background:rgba(13,27,62,.5);display:flex;align-items:center;justify-content:center">'
+      +'<div style="background:var(--red);color:white;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:100px">'
+      +(lang==='sw'?'IMEISHA STOCK':'OUT OF STOCK')+'</div></div>':'')
+    +'</div>'
+
+    // Body
+    +'<div class="prod-body">'
+    +'<div class="prod-name">'+name+'</div>'
+    +'<div class="prod-desc">'+desc+'</div>'
+    +'<div class="prod-price-row">'
+    +'<div class="prod-price">'+fmt(p.price)+' TZS</div>'
+    +(p.origPrice?'<div class="prod-price-orig">'+fmt(p.origPrice)+' TZS</div>':'')
+    +'</div>'
+
+    // Buttons — disabled if out of stock
+    +'<div class="prod-btns">'
+    +(outOfStock
+      ?'<div style="flex:1;padding:9px 5px;border-radius:10px;background:var(--mist);'
+      +'color:rgba(13,27,62,.3);font-size:9px;font-weight:800;text-align:center;'
+      +'letter-spacing:1px;text-transform:uppercase">'
+      +(lang==='sw'?'IMEISHA':'SOLD OUT')+'</div>'
+      :'<button class="add-cart-btn" onclick="addToCart(\''+p.id+'\')"'
+      +' style="'+(inCart?'background:var(--green)':'')+'">'
+      +(inCart?'✓':'+')+'  '+(lang==='sw'?'Kapu':'Cart')+'</button>')
+    +'<a href="https://wa.me/255619945012?text='+waMsg+'"'
+    +' class="wa-btn-sm" target="_blank">💬</a>'
+    +'</div>'
+
+    +'</div>'
+    +'</div>';
+}
+
+function filterCat(cat, btn) {
+  document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  renderProducts(cat);
+}
+
+function filterProducts() {
+  renderProducts(currentCat);
+}
+
+function addToCart(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  const existing = cart.find(c => c.id === id);
+  if (existing) existing.qty++;
+  else cart.push({ ...p, qty: 1 });
+  updateCartBadge();
+  renderProducts(currentCat);
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(c => c.id !== id);
+  updateCartBadge();
+  renderCartItems();
+}
+
+function updateCartBadge() {
+  const total = cart.reduce((s, c) => s + c.qty, 0);
+  document.getElementById('cart-count').textContent = total;
+}
+
+function openCart() {
+  renderCartItems();
+  document.getElementById('cart-modal').classList.add('open');
+  shopPayOption = 'deposit';
+  setTimeout(() => {
+    selectShopPayOption('deposit');
+    updateShopMpesaDisplay();
+  }, 100);
+}
+
+function closeCart() {
+  document.getElementById('cart-modal').classList.remove('open');
+}
+
+function renderCartItems() {
+  const wrap     = document.getElementById('cart-items');
+  const checkout = document.getElementById('cart-checkout');
+  const countLbl = document.getElementById('cart-count-lbl');
+
+  if (cart.length === 0) {
+    wrap.innerHTML = `
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <div class="cart-empty-txt">${lang==='sw'?'Kikapu chako kiko wazi':'Your cart is empty'}</div>
+    </div>`;
+    checkout.style.display = 'none';
+    countLbl.textContent   = '0 ' + (lang==='sw'?'bidhaa':'items');
+    return;
+  }
+
+  const cartTotal = cart.reduce((s, c) => s + c.price * c.qty, 0);
+  countLbl.textContent = cart.reduce((s,c)=>s+c.qty,0) + ' ' + (lang==='sw'?'bidhaa':'items');
+
+  wrap.innerHTML = cart.map(c => `
+  <div class="cart-item">
+    <div class="cart-item-icon">${c.icon}</div>
+    <div>
+      <div class="cart-item-name">${lang==='sw'?c.nameSw:c.nameEn} ×${c.qty}</div>
+      <div class="cart-item-price">${fmt(c.price * c.qty)} TZS</div>
+    </div>
+    <button class="cart-item-del" onclick="removeFromCart(${c.id})">🗑</button>
+  </div>`).join('');
+
+  document.getElementById('cart-dep-val').textContent = fmt(cartTotal * 0.45) + ' TZS';
+  checkout.style.display = 'block';
+}
+
+async function submitCartOrder() {
+  if (window._submitting) return;
+  window._submitting = true;
+  // ... rest of function
+  const name    = document.getElementById('cart-name').value.trim();
+  const phone   = document.getElementById('cart-phone').value.trim();
+  const address = document.getElementById('cart-address').value.trim();
+  const txn     = document.getElementById('cart-txn').value.trim();
+
+  if (!name || !phone || !address || !txn) {
+    alert(lang==='sw'
+      ? 'Tafadhali jaza sehemu zote kabla ya kuwasilisha.'
+      : 'Please fill all fields before submitting.');
+    return;
+  }
+
+  const cartTotal = cart.reduce((s, c) => s + c.price * c.qty, 0);
+  const payload   = {
+    type    : 'shop',
+    items   : cart.map(c => ({ name:c.nameEn, qty:c.qty, price:c.price })),
+    total   : cartTotal,
+    deposit_paid     : shopPayOption === 'full'
+      ? Math.round(cartTotal * 0.95)
+      : Math.round(cartTotal * 0.45),
+    payment_type     : shopPayOption,
+    name, phone, address, txn,
+    created : new Date().toISOString()
+  };
+  const { error } = await sb.from('orders').insert([{
+    order_type       : 'shop',
+    customer_name    : name,
+    customer_phone   : phone,
+    delivery_address : address,
+    items            : cart.map(c => ({ name:c.nameEn, qty:c.qty, price:c.price })),
+    total_amount     : cartTotal,
+    deposit_paid     : Math.round(cartTotal * 0.45),
+    txn_ref          : txn,
+    status           : 'pending',
+  }]);
+  if (error) { alert('Imeshindwa kutuma. Jaribu tena.'); return; }
+
+  cart = [];
+  updateCartBadge();
+  closeCart();
+  showSuccess(lang==='sw'
+    ? `Agizo lako la duka limethibitishwa. Tutawasiliana nawe hivi karibuni kwenye ${phone}.`
+    : `Your shop order is confirmed. We will contact you shortly on ${phone}.`
+  );
+  window._submitting = false;
+}
+
+// ══════════════════════════════════════
+// SUCCESS SCREEN
+// ══════════════════════════════════════
+function showSuccess(msg) {
+  document.getElementById('suc-body').textContent = msg;
+  document.getElementById('suc-modal').classList.add('open');
+  setTimeout(() => {
+    document.getElementById('suc-modal').classList.remove('open');
+    showPage('landing');
+  }, 3500);
+}
+
+// Register service worker for PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log('SW registered'))
+      .catch(() => console.log('SW failed'));
+  });
+}
+</script>
+
+</body>
+</html>
