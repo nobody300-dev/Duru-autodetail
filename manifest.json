@@ -1,0 +1,25 @@
+{
+  "name": "DURU — Car Wash & Auto Shop",
+  "short_name": "DURU",
+  "description": "Osho wa gari na bidhaa za magari — Mbeya Tanzania",
+  "start_url": "https://duru-autodetail.pages.dev/index.html",
+  "scope": "https://duru-autodetail.pages.dev/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1b3e",
+  "theme_color": "#0d1b3e",
+  "icons": [
+    {
+      "src": "https://duru-autodetail.pages.dev/pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://duru-autodetail.pages.dev/pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
