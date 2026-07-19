@@ -262,6 +262,15 @@ html,body{font-family:var(--fb);background:var(--smoke);color:var(--ink);overflo
 .prod-body{padding:11px}
 .prod-name{font-size:11px;font-weight:800;color:var(--navy);margin-bottom:3px;line-height:1.3}
 .prod-desc{font-size:9px;color:rgba(13,27,62,.45);line-height:1.4;margin-bottom:7px}
+  .prod-gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;width:100%;aspect-ratio:1;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.prod-gallery::-webkit-scrollbar{display:none}
+.prod-gallery-img{width:100%;flex-shrink:0;scroll-snap-align:start;aspect-ratio:1;object-fit:cover}
+.prod-gallery-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:4px;pointer-events:none}
+.gdot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 0 2px rgba(0,0,0,.3)}
+.gdot.on{background:#fff;width:14px;border-radius:3px;transition:all .2s}
+.prod-more-toggle{font-size:9px;font-weight:800;color:var(--blue);cursor:pointer;letter-spacing:.5px;margin-bottom:6px}
+.prod-more-content{max-height:0;overflow:hidden;font-size:9px;color:rgba(13,27,62,.55);line-height:1.6;transition:max-height .3s ease}
+.prod-more-content.open{max-height:400px;margin-bottom:7px}
 .prod-price-row{display:flex;align-items:center;gap:5px;margin-bottom:9px}
 .prod-price{font-family:var(--fd);font-size:17px;color:var(--blue)}
 .prod-price-orig{font-size:10px;color:rgba(13,27,62,.3);text-decoration:line-through}
@@ -1614,7 +1623,11 @@ async function loadProductsFromDB() {
         tier      : p.tier,
         sale      : p.is_sale || false,
         inStock   : p.in_stock,
-        imageUrl  : p.image_url || null,
+        imageUrl  : p.image_url   || null,
+        imageUrl2 : p.image_url_2 || null,
+        imageUrl3 : p.image_url_3 || null,
+        imageUrl4 : p.image_url_4 || null,
+        details   : p.details     || null,
       });
     });
     console.log('Loaded', products.length, 'products from Supabase');
@@ -2347,23 +2360,35 @@ function buildProdCard(p) {
     'Habari DURU, ninapenda kununua:\n' + name + '\nBei: ' + fmt(p.price) + ' TZS\nNambari yangu: '
   );
 
-  // Image section — real image if available, emoji placeholder if not
-  const imgSection = p.imageUrl
-    ? '<img src="'+p.imageUrl+'" alt="'+name+'"'
+  const images = [p.imageUrl, p.imageUrl2, p.imageUrl3, p.imageUrl4].filter(Boolean);
+
+  let imgSection;
+  if (images.length > 1) {
+    imgSection = '<div class="prod-gallery" onscroll="updateGalleryDots(this)">'
+      + images.map(url => '<img src="'+url+'" alt="'+name+'" class="prod-gallery-img" onerror="this.style.display=\'none\'">').join('')
+      + '</div>'
+      + '<div class="prod-gallery-dots">'
+      + images.map((_,i) => '<span class="gdot'+(i===0?' on':'')+'"></span>').join('')
+      + '</div>';
+  } else if (images.length === 1) {
+    imgSection = '<img src="'+images[0]+'" alt="'+name+'"'
       +' style="width:100%;aspect-ratio:1;object-fit:cover;display:block"'
       +' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
       +'<div style="display:none;width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--smoke),var(--mist));flex-direction:column;align-items:center;justify-content:center;gap:6px">'
       +'<div class="prod-img-icon">'+p.icon+'</div>'
       +'<div class="prod-img-lbl">'+(lang==='sw'?'Picha inakuja':'Image coming')+'</div>'
-      +'</div>'
-    : '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--smoke),var(--mist))">'
+      +'</div>';
+  } else {
+    imgSection = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--smoke),var(--mist))">'
       +'<div class="prod-img-icon">'+p.icon+'</div>'
       +'<div class="prod-img-lbl">'+(lang==='sw'?'Picha inakuja':'Image coming')+'</div>'
       +'</div>';
+  }
+
+  const hasDetails = p.details && p.details.trim().length > 0;
 
   return '<div class="prod-card" style="'+(outOfStock?'opacity:.6':'')+'">'
 
-    // Image wrapper with badges
     +'<div class="prod-img" style="padding:0;overflow:hidden;position:relative">'
     +imgSection
     +'<div style="position:absolute;top:8px;left:8px">'
@@ -2378,16 +2403,19 @@ function buildProdCard(p) {
       +(lang==='sw'?'IMEISHA STOCK':'OUT OF STOCK')+'</div></div>':'')
     +'</div>'
 
-    // Body
     +'<div class="prod-body">'
     +'<div class="prod-name">'+name+'</div>'
     +'<div class="prod-desc">'+desc+'</div>'
+    +(hasDetails
+      ? '<div class="prod-more-toggle" onclick="toggleDetails(\''+p.id+'\')" id="toggle-'+p.id+'">'
+        + (lang==='sw'?'Angalia Zaidi ▾':'See More ▾') + '</div>'
+        + '<div class="prod-more-content" id="details-'+p.id+'">' + p.details.replace(/\n/g,'<br>') + '</div>'
+      : '')
     +'<div class="prod-price-row">'
     +'<div class="prod-price">'+fmt(p.price)+' TZS</div>'
     +(p.origPrice?'<div class="prod-price-orig">'+fmt(p.origPrice)+' TZS</div>':'')
     +'</div>'
 
-    // Buttons — disabled if out of stock
     +'<div class="prod-btns">'
     +(outOfStock
       ?'<div style="flex:1;padding:9px 5px;border-radius:10px;background:var(--mist);'
@@ -2443,6 +2471,21 @@ function decreaseQty(id) {
   if (existing.qty <= 0) cart = cart.filter(c => c.id !== id);
   updateCartBadge();
   renderProducts(currentCat);
+}
+
+  function toggleDetails(id) {
+  const content = document.getElementById('details-' + id);
+  const toggle  = document.getElementById('toggle-' + id);
+  const isOpen  = content.classList.toggle('open');
+  toggle.textContent = isOpen
+    ? (lang==='sw' ? 'Ficha ▴' : 'See Less ▴')
+    : (lang==='sw' ? 'Angalia Zaidi ▾' : 'See More ▾');
+}
+
+function updateGalleryDots(galleryEl) {
+  const dots = galleryEl.nextElementSibling.children;
+  const index = Math.round(galleryEl.scrollLeft / galleryEl.offsetWidth);
+  Array.from(dots).forEach((d,i) => d.classList.toggle('on', i===index));
 }
 
 function updateCartBadge() {
