@@ -269,6 +269,10 @@ html,body{font-family:var(--fb);background:var(--smoke);color:var(--ink);overflo
 .add-cart-btn{flex:1;padding:9px 5px;border-radius:10px;background:var(--blue);color:var(--white);border:none;cursor:pointer;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;transition:all .15s}
 .add-cart-btn:active{transform:scale(.95)}
 .wa-btn-sm{width:34px;height:34px;border-radius:10px;background:#e7fef0;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;text-decoration:none}
+  .qty-stepper{flex:1;display:flex;align-items:center;justify-content:space-between;background:var(--green);border-radius:10px;padding:4px 6px}
+.qty-stepper button{width:24px;height:24px;border-radius:7px;background:rgba(255,255,255,.25);border:none;color:var(--white);font-size:14px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+.qty-stepper button:active{transform:scale(.85)}
+.qty-stepper .qty-num{color:var(--white);font-size:12px;font-weight:800;min-width:16px;text-align:center}
 .cart-icon-wrap{position:relative;cursor:pointer}
 .cart-badge{position:absolute;top:-6px;right:-6px;background:var(--red);color:var(--white);border-radius:50%;width:16px;height:16px;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center}
 
@@ -2390,9 +2394,14 @@ function buildProdCard(p) {
       +'color:rgba(13,27,62,.3);font-size:9px;font-weight:800;text-align:center;'
       +'letter-spacing:1px;text-transform:uppercase">'
       +(lang==='sw'?'IMEISHA':'SOLD OUT')+'</div>'
-      :'<button class="add-cart-btn" onclick="addToCart(\''+p.id+'\')"'
-      +' style="'+(inCart?'background:var(--green)':'')+'">'
-      +(inCart?'✓':'+')+'  '+(lang==='sw'?'Kapu':'Cart')+'</button>')
+      :inCart
+      ?'<div class="qty-stepper">'
+        +'<button onclick="decreaseQty(\''+p.id+'\')">−</button>'
+        +'<span class="qty-num">'+inCart.qty+'</span>'
+        +'<button onclick="addToCart(\''+p.id+'\')">+</button>'
+      +'</div>'
+      :'<button class="add-cart-btn" onclick="addToCart(\''+p.id+'\')">+  '
+      +(lang==='sw'?'Kapu':'Cart')+'</button>')
     +'<a href="https://wa.me/255619945012?text='+waMsg+'"'
     +' class="wa-btn-sm" target="_blank">💬</a>'
     +'</div>'
@@ -2425,6 +2434,15 @@ function removeFromCart(id) {
   cart = cart.filter(c => c.id !== id);
   updateCartBadge();
   renderCartItems();
+}
+
+function decreaseQty(id) {
+  const existing = cart.find(c => c.id === id);
+  if (!existing) return;
+  existing.qty--;
+  if (existing.qty <= 0) cart = cart.filter(c => c.id !== id);
+  updateCartBadge();
+  renderProducts(currentCat);
 }
 
 function updateCartBadge() {
@@ -2472,7 +2490,7 @@ function renderCartItems() {
       <div class="cart-item-name">${lang==='sw'?c.nameSw:c.nameEn} ×${c.qty}</div>
       <div class="cart-item-price">${fmt(c.price * c.qty)} TZS</div>
     </div>
-    <button class="cart-item-del" onclick="removeFromCart(${c.id})">🗑</button>
+   <button class="cart-item-del" onclick="removeFromCart('${c.id}')">🗑</button> 
   </div>`).join('');
 
   document.getElementById('cart-dep-val').textContent = fmt(cartTotal * 0.45) + ' TZS';
