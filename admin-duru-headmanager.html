@@ -662,8 +662,46 @@ html,body{font-family:var(--fb);background:var(--smoke);color:var(--ink);overflo
           <input class="form-input" id="p-icon" placeholder="📦" maxlength="4">
         </div>
         <div class="form-group">
-          <label class="form-lbl">Image URL (optional)</label>
-          <input class="form-input" id="p-image" placeholder="https://...">
+          <label class="form-lbl">Product Photos (up to 4)</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px">
+            <div>
+              <img id="p-image-preview-1" src="" alt="" style="width:100%;aspect-ratio:1;border-radius:8px;object-fit:cover;background:#f1f3f8;display:none;margin-bottom:4px">
+              <label style="display:block;padding:8px;border-radius:10px;background:var(--blue,#1a56ff);color:#fff;font-size:10px;font-weight:800;text-align:center;cursor:pointer">
+                📷 Photo 1 (main)
+                <input type="file" accept="image/*" style="display:none" onchange="handleProductImageUpload(this.files[0],1)">
+              </label>
+              <input class="form-input" id="p-image" placeholder="or paste URL" style="margin-top:4px;font-size:10px;padding:6px 10px">
+            </div>
+            <div>
+              <img id="p-image-preview-2" src="" alt="" style="width:100%;aspect-ratio:1;border-radius:8px;object-fit:cover;background:#f1f3f8;display:none;margin-bottom:4px">
+              <label style="display:block;padding:8px;border-radius:10px;background:var(--blue,#1a56ff);color:#fff;font-size:10px;font-weight:800;text-align:center;cursor:pointer">
+                📷 Photo 2
+                <input type="file" accept="image/*" style="display:none" onchange="handleProductImageUpload(this.files[0],2)">
+              </label>
+              <input class="form-input" id="p-image-2" placeholder="or paste URL" style="margin-top:4px;font-size:10px;padding:6px 10px">
+            </div>
+            <div>
+              <img id="p-image-preview-3" src="" alt="" style="width:100%;aspect-ratio:1;border-radius:8px;object-fit:cover;background:#f1f3f8;display:none;margin-bottom:4px">
+              <label style="display:block;padding:8px;border-radius:10px;background:var(--blue,#1a56ff);color:#fff;font-size:10px;font-weight:800;text-align:center;cursor:pointer">
+                📷 Photo 3
+                <input type="file" accept="image/*" style="display:none" onchange="handleProductImageUpload(this.files[0],3)">
+              </label>
+              <input class="form-input" id="p-image-3" placeholder="or paste URL" style="margin-top:4px;font-size:10px;padding:6px 10px">
+            </div>
+            <div>
+              <img id="p-image-preview-4" src="" alt="" style="width:100%;aspect-ratio:1;border-radius:8px;object-fit:cover;background:#f1f3f8;display:none;margin-bottom:4px">
+              <label style="display:block;padding:8px;border-radius:10px;background:var(--blue,#1a56ff);color:#fff;font-size:10px;font-weight:800;text-align:center;cursor:pointer">
+                📷 Photo 4
+                <input type="file" accept="image/*" style="display:none" onchange="handleProductImageUpload(this.files[0],4)">
+              </label>
+              <input class="form-input" id="p-image-4" placeholder="or paste URL" style="margin-top:4px;font-size:10px;padding:6px 10px">
+            </div>
+          </div>
+          <div id="p-image-status" style="font-size:10px;color:rgba(13,27,62,.4);margin-bottom:8px"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-lbl">Full Details (specs, how to use, why buy — shown when customer taps "See more")</label>
+          <textarea class="form-textarea" id="p-details" placeholder="e.g. Specifications: 5W-30, 4L bottle. How to use: ... Why buy: ..." style="min-height:120px"></textarea>
         </div>
       </div>
       <div style="display:flex;gap:16px;margin-bottom:18px">
@@ -832,6 +870,33 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+async function handleProductImageUpload(file, slot) {
+  if (!file) return;
+  const statusEl = document.getElementById('p-image-status');
+  const urlInput = document.getElementById(slot === 1 ? 'p-image' : 'p-image-' + slot);
+  const preview  = document.getElementById('p-image-preview-' + slot);
+
+  statusEl.textContent = 'Uploading photo ' + slot + '...';
+
+  const resizedBlob = await resizeImage(file, 1000, 0.8);
+  const fileName = 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2,8) + '.jpg';
+
+  const { error } = await sb.storage
+    .from('product-images')
+    .upload(fileName, resizedBlob, { contentType: 'image/jpeg' });
+
+  if (error) {
+    statusEl.textContent = 'Upload failed: ' + error.message;
+    return;
+  }
+
+  const { data } = sb.storage.from('product-images').getPublicUrl(fileName);
+  urlInput.value = data.publicUrl;
+  preview.src = data.publicUrl;
+  preview.style.display = 'block';
+  statusEl.textContent = 'Photo ' + slot + ' uploaded ✓';
+}
+  
 // ══════════════════════════════════════
 // APP STATE
 // ══════════════════════════════════════
@@ -1442,7 +1507,7 @@ function openAddProduct() {
   editingProductId = null;
   document.getElementById('product-modal-title').textContent = 'Add Product';
   document.getElementById('edit-product-id').value = '';
-  ['p-name-sw','p-name-en','p-desc-sw','p-desc-en','p-image'].forEach(id =>
+  ['p-name-sw','p-name-en','p-desc-sw','p-desc-en','p-image','p-image-2','p-image-3','p-image-4','p-details'].forEach(id =>
     document.getElementById(id).value = ''
   );
   document.getElementById('p-price').value       = '';
@@ -1469,7 +1534,11 @@ function openEditProduct(id) {
   document.getElementById('p-price').value          = p.price    || '';
   document.getElementById('p-orig-price').value     = p.orig_price|| '';
   document.getElementById('p-icon').value           = p.icon     || '📦';
-  document.getElementById('p-image').value          = p.image_url|| '';
+  document.getElementById('p-image').value          = p.image_url  || '';
+  document.getElementById('p-image-2').value        = p.image_url_2|| '';
+  document.getElementById('p-image-3').value        = p.image_url_3|| '';
+  document.getElementById('p-image-4').value        = p.image_url_4|| '';
+  document.getElementById('p-details').value        = p.details    || '';
   document.getElementById('p-category').value       = p.category || 'engine';
   document.getElementById('p-tier').value           = p.tier     || 'standard';
   document.getElementById('p-visible').checked      = p.visible;
@@ -1487,7 +1556,11 @@ async function saveProduct() {
     price      : parseFloat(document.getElementById('p-price').value)   || 0,
     orig_price : parseFloat(document.getElementById('p-orig-price').value)||null,
     icon       : document.getElementById('p-icon').value.trim()         || '📦',
-    image_url  : document.getElementById('p-image').value.trim()        || null,
+    image_url   : document.getElementById('p-image').value.trim()   || null,
+    image_url_2 : document.getElementById('p-image-2').value.trim() || null,
+    image_url_3 : document.getElementById('p-image-3').value.trim() || null,
+    image_url_4 : document.getElementById('p-image-4').value.trim() || null,
+    details     : document.getElementById('p-details').value.trim() || null,
     category   : document.getElementById('p-category').value,
     tier       : document.getElementById('p-tier').value,
     visible    : document.getElementById('p-visible').checked,
