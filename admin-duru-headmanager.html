@@ -650,11 +650,11 @@ html,body{font-family:var(--fb);background:var(--smoke);color:var(--ink);overflo
       </div>
       <div class="form-group">
         <label class="form-lbl">Description (Swahili)</label>
-        <textarea class="form-textarea" id="p-desc-sw" placeholder="Maelezo ya bidhaa..."></textarea>
+        <textarea class="form-textarea" id="p-desc-sw" placeholder="Maelezo ya bidhaa..." maxlength="200"></textarea>
       </div>
       <div class="form-group">
         <label class="form-lbl">Description (English)</label>
-        <textarea class="form-textarea" id="p-desc-en" placeholder="Product description..."></textarea>
+   <textarea class="form-textarea" id="p-desc-en" placeholder="Product description..." maxlength="200"></textarea>
       </div>
 <div class="form-row">
         <div class="form-group">
@@ -875,10 +875,11 @@ async function handleProductImageUpload(file, slot) {
   const statusEl = document.getElementById('p-image-status');
   const urlInput = document.getElementById(slot === 1 ? 'p-image' : 'p-image-' + slot);
   const preview  = document.getElementById('p-image-preview-' + slot);
+  const oldUrl   = urlInput.value.trim();
 
   statusEl.textContent = 'Uploading photo ' + slot + '...';
 
-  const resizedBlob = await resizeImage(file, 1000, 0.8);
+  const resizedBlob = await resizeImage(file, 1400, 0.92);
   const fileName = 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2,8) + '.jpg';
 
   const { error } = await sb.storage
@@ -895,6 +896,14 @@ async function handleProductImageUpload(file, slot) {
   preview.src = data.publicUrl;
   preview.style.display = 'block';
   statusEl.textContent = 'Photo ' + slot + ' uploaded ✓';
+
+  // Delete the old file this slot used to point to, if any
+  if (oldUrl && oldUrl.includes('/product-images/')) {
+    const oldFileName = oldUrl.split('/product-images/')[1];
+    if (oldFileName) {
+      sb.storage.from('product-images').remove([oldFileName]);
+    }
+  }
 }
   function resizeImage(file, maxWidth, quality) {
   return new Promise((resolve) => {
