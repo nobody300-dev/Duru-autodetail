@@ -264,7 +264,7 @@ html,body{font-family:var(--fb);background:var(--smoke);color:var(--ink);overflo
 .prod-desc{font-size:9px;color:rgba(13,27,62,.45);line-height:1.4;margin-bottom:7px}
   .prod-gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;width:100%;aspect-ratio:1;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .prod-gallery::-webkit-scrollbar{display:none}
-.prod-gallery-img{width:100%;flex-shrink:0;scroll-snap-align:start;aspect-ratio:1;object-fit:cover}
+.prod-gallery-img{width:100%;flex-shrink:0;scroll-snap-align:start;aspect-ratio:1;object-fit:contain;background:#fff}
 .prod-gallery-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:4px;pointer-events:none}
 .gdot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 0 2px rgba(0,0,0,.3)}
 .gdot.on{background:#fff;width:14px;border-radius:3px;transition:all .2s}
@@ -2372,7 +2372,7 @@ function buildProdCard(p) {
       + '</div>';
   } else if (images.length === 1) {
     imgSection = '<img src="'+images[0]+'" alt="'+name+'"'
-      +' style="width:100%;aspect-ratio:1;object-fit:cover;display:block"'
+      +' style="width:100%;aspect-ratio:1;object-fit:contain;background:#fff;display:block"'
       +' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
       +'<div style="display:none;width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--smoke),var(--mist));flex-direction:column;align-items:center;justify-content:center;gap:6px">'
       +'<div class="prod-img-icon">'+p.icon+'</div>'
