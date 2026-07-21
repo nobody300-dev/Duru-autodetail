@@ -271,7 +271,11 @@ html,body{font-family:var(--fb);background:var(--smoke);color:var(--ink);overflo
     <div class="login-logo">DURU<span>.</span></div>
     <div class="login-sub">Business Operating System</div>
     <div class="login-card">
-      <label class="login-lbl">Admin Password</label>
+      <label class="login-lbl">Admin Email</label>
+      <input class="login-input" id="login-email" type="email"
+        placeholder="Enter email..."
+        onkeydown="if(event.key==='Enter')doLogin()">
+      <label class="login-lbl" style="margin-top:12px">Admin Password</label>
       <input class="login-input" id="login-pass" type="password"
         placeholder="Enter password..."
         onkeydown="if(event.key==='Enter')doLogin()">
@@ -942,49 +946,38 @@ let editingProductId    = null;
 // LOGIN / LOGOUT
 // ══════════════════════════════════════
 async function doLogin() {
-  const pass = document.getElementById('login-pass').value.trim();
-  const err  = document.getElementById('login-err');
+  const email = document.getElementById('login-email').value.trim();
+  const pass  = document.getElementById('login-pass').value.trim();
+  const err   = document.getElementById('login-err');
   err.style.display = 'none';
 
-  if (!pass) { err.textContent = '❌ Please enter your password.'; err.style.display = 'block'; return; }
+  if (!email || !pass) { err.textContent = '❌ Please enter email and password.'; err.style.display = 'block'; return; }
 
-  // Fetch password from settings table
-  const { data, error } = await sb
-    .from('settings')
-    .select('value')
-    .eq('key', 'admin_password')
-    .single();
+  const { error } = await sb.auth.signInWithPassword({ email, password: pass });
 
-  if (error || !data) {
-    err.textContent = '❌ Could not connect. Check internet.';
-    err.style.display = 'block';
-    return;
-  }
-
-  if (pass !== data.value) {
-    err.textContent = '❌ Wrong password. Try again.';
+  if (error) {
+    err.textContent = '❌ ' + error.message;
     err.style.display = 'block';
     document.getElementById('login-pass').value = '';
     return;
   }
 
-  // Success
-  sessionStorage.setItem('duru_admin', '1');
   document.getElementById('login-screen').classList.add('hide');
   document.getElementById('admin-app').classList.add('show');
   initAdmin();
 }
 
-function doLogout() {
-  sessionStorage.removeItem('duru_admin');
+async function doLogout() {
+  await sb.auth.signOut();
   document.getElementById('login-screen').classList.remove('hide');
   document.getElementById('admin-app').classList.remove('show');
   document.getElementById('login-pass').value = '';
 }
 
 // Check if already logged in this session
-window.addEventListener('load', () => {
-  if (sessionStorage.getItem('duru_admin') === '1') {
+window.addEventListener('load', async () => {
+  const { data: { session } } = await sb.auth.getSession();
+  if (session) {
     document.getElementById('login-screen').classList.add('hide');
     document.getElementById('admin-app').classList.add('show');
     initAdmin();
