@@ -29,6 +29,13 @@ self.addEventListener('fetch', e => {
         caches.open(CACHE).then(cache => cache.put(e.request, resClone));
         return res;
       })
-      .catch(() => caches.match(e.request))
+      .catch(() =>
+        caches.match(e.request).then(cached =>
+          cached || new Response('Offline — please check your internet connection.', {
+            status: 503,
+            headers: { 'Content-Type': 'text/plain' }
+          })
+        )
+      )
   );
 });
